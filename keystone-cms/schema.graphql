@@ -5,6 +5,8 @@ type ProductsList {
   id: ID!
   productName: String
   productPriceBGN: String
+  productDescription: String
+  ProductNote: String
 }
 
 input ProductsListWhereUniqueInput {
@@ -18,6 +20,8 @@ input ProductsListWhereInput {
   id: IDFilter
   productName: StringFilter
   productPriceBGN: StringFilter
+  productDescription: StringFilter
+  ProductNote: StringFilter
 }
 
 input IDFilter {
@@ -63,6 +67,8 @@ input ProductsListOrderByInput {
   id: OrderDirection
   productName: OrderDirection
   productPriceBGN: OrderDirection
+  productDescription: OrderDirection
+  ProductNote: OrderDirection
 }
 
 enum OrderDirection {
@@ -73,6 +79,8 @@ enum OrderDirection {
 input ProductsListUpdateInput {
   productName: String
   productPriceBGN: String
+  productDescription: String
+  ProductNote: String
 }
 
 input ProductsListUpdateArgs {
@@ -83,6 +91,8 @@ input ProductsListUpdateArgs {
 input ProductsListCreateInput {
   productName: String
   productPriceBGN: String
+  productDescription: String
+  ProductNote: String
 }
 
 type NewsList {

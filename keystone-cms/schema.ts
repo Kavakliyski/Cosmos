@@ -8,6 +8,7 @@ import {
     password,
     timestamp,
     select,
+    image,
 } from '@keystone-6/core/fields';
 
 
@@ -24,7 +25,10 @@ export const lists: Lists = {
         fields: {
             productName: text({ validation: { isRequired: true } }),
             productPriceBGN: text({ validation: { isRequired: true } }),
-
+            productDescription: text({ validation: { isRequired: true } }),
+            ProductNote: text({ validation: { isRequired: true } }),
+            altText: text(),
+            image: image({ storage: 'my_local_images' }),
         },
 
         ui: {

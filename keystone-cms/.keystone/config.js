@@ -35,7 +35,11 @@ var lists = {
     access: import_access.allowAll,
     fields: {
       productName: (0, import_fields.text)({ validation: { isRequired: true } }),
-      productPriceBGN: (0, import_fields.text)({ validation: { isRequired: true } })
+      productPriceBGN: (0, import_fields.text)({ validation: { isRequired: true } }),
+      productDescription: (0, import_fields.text)({ validation: { isRequired: true } }),
+      ProductNote: (0, import_fields.text)({ validation: { isRequired: true } }),
+      altText: (0, import_fields.text)(),
+      image: (0, import_fields.image)({ storage: "my_local_images" })
     },
     ui: {
       labelField: "productName",

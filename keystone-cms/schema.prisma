@@ -13,9 +13,11 @@ generator client {
 }
 
 model ProductsList {
-  id              String @id @default(cuid())
-  productName     String @default("")
-  productPriceBGN String @default("")
+  id                 String @id @default(cuid())
+  productName        String @default("")
+  productPriceBGN    String @default("")
+  productDescription String @default("")
+  ProductNote        String @default("")
 }
 
 model NewsList {
