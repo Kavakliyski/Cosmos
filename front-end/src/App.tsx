@@ -1,17 +1,22 @@
+
+import Footer from './components/Footer';
+import Header from './components/Header';
+
 import './styles/App.scss';
+
+import { RouterProvider } from "react-router-dom";
+
+import { routes } from './routes';
+
 
 function App() {
 
 
     return (
         <div className="App">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum, expedita.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dolores ipsum doloremque repellendus eum quae exercitationem, eos quod? Doloribus, magnam soluta culpa, nostrum deserunt minima esse natus adipisci ex itaque quia architecto harum rerum provident, qui corporis commodi tempore? Nam, quas eveniet molestias ad totam soluta sint libero dignissimos necessitatibus.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dolores ipsum doloremque repellendus eum quae exercitationem, eos quod? Doloribus, magnam soluta culpa, nostrum deserunt minima esse natus adipisci ex itaque quia architecto harum rerum provident, qui corporis commodi tempore? Nam, quas eveniet molestias ad totam soluta sint libero dignissimos necessitatibus.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dolores ipsum doloremque repellendus eum quae exercitationem, eos quod? Doloribus, magnam soluta culpa, nostrum deserunt minima esse natus adipisci ex itaque quia architecto harum rerum provident, qui corporis commodi tempore? Nam, quas eveniet molestias ad totam soluta sint libero dignissimos necessitatibus.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dolores ipsum doloremque repellendus eum quae exercitationem, eos quod? Doloribus, magnam soluta culpa, nostrum deserunt minima esse natus adipisci ex itaque quia architecto harum rerum provident, qui corporis commodi tempore? Nam, quas eveniet molestias ad totam soluta sint libero dignissimos necessitatibus.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dolores ipsum doloremque repellendus eum quae exercitationem, eos quod? Doloribus, magnam soluta culpa, nostrum deserunt minima esse natus adipisci ex itaque quia architecto harum rerum provident, qui corporis commodi tempore? Nam, quas eveniet molestias ad totam soluta sint libero dignissimos necessitatibus.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dolores ipsum doloremque repellendus eum quae exercitationem, eos quod? Doloribus, magnam soluta culpa, nostrum deserunt minima esse natus adipisci ex itaque quia architecto harum rerum provident, qui corporis commodi tempore? Nam, quas eveniet molestias ad totam soluta sint libero dignissimos necessitatibus.</p>
+            <Header />
+            <RouterProvider router={routes} />
+            <Footer />
         </div>
     )
 }
