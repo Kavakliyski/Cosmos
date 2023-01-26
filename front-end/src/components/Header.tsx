@@ -1,8 +1,27 @@
 
 // styles
 import '../styles/Header_Footer/Header.scss';
+import styled from 'styled-components';
+
+// logo
+import logo from '../assets/logo.svg';
+
+// cart svg
+import cart from '../assets/cart.svg';
 
 // react router dom
+import { NavLink, Link, useHref } from 'react-router-dom'
+
+
+const LogoSVG = styled.img`
+    width: 20vw;
+`
+
+const CartSVG = styled.img`
+    width: 1.9vw;
+
+`
+
 
 function Header() {
 
@@ -10,13 +29,29 @@ function Header() {
     return (
         <div className='Header'>
             <nav className='nav'>
-                <ul>
-                    <li>за нас</li>
-                    <li>филми</li>
-                    <li><a href="/shop">магазин</a></li>
-                </ul>
 
+
+                <div className='Links1'>
+                    <ul>
+                        <li>за нас</li>
+                        <li>филми</li>
+                    </ul>
+                </div>
+
+                <div className='LogoDiv'>
+                    <Link to="/">
+                        <LogoSVG src={logo} alt='' />
+                    </Link>
+                </div>
+
+                <div className='Links2'>
+                    <ul>
+                        <Link to="/shop"><li>магазин</li></Link>
+                        <li><CartSVG src={cart} /></li>
+                    </ul>
+                </div>
             </nav>
+
         </div>
     )
 }

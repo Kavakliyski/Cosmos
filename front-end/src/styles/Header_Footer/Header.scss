@@ -1,5 +1,5 @@
 .Header {
-    position: fixed;
+    position: absolute;
     color: #E4E4E4;
     background-color: transparent;
     width: 100vw;
@@ -10,10 +10,69 @@
 
     .nav {
 
-        ul {
+        .LogoDiv {
             display: flex;
-            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px;
+        }
 
+        .Links1 {
+
+            position: absolute;
+            top: 40px;
+            left: 0px;
+            padding-left: 100px;
+
+            ul {
+                display: flex;
+                flex-direction: row;
+                list-style: none;
+            }
+
+            li {
+                text-align: center;
+                font-size: xx-large;
+
+                display: inline-block;
+                padding-left: 30px;
+                padding-right: 30px;
+                width: 200px;
+                justify-content: center;
+                vertical-align: middle;
+            }
+        }
+
+
+        .Links2 {
+
+            position: absolute;
+            top: 40px;
+            right: 0px;
+            padding-right: 100px;
+
+
+            ul {
+                display: flex;
+                flex-direction: row;
+                list-style: none;
+
+                a{
+                    color: #e4e4e4;
+                }
+            }
+
+            li {
+                text-align: center;
+                font-size: xx-large;
+
+                display: inline-block;
+                padding-left: 30px;
+                padding-right: 30px;
+                width: 200px;
+                justify-content: center;
+                vertical-align: middle;
+            }
         }
     }
 }
