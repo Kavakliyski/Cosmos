@@ -4,11 +4,9 @@ import styled from 'styled-components';
 
 
 const HeroBanner = styled.img`
-    // position: absolute;
     width: 100vw;
-    left: 0px;
-    // top: 0px;
-    object-fit: cover;
+    // object-fit: cover;
+    background-color: #1d0623;
     max-width: 100%;
     height: auto;
     overflow: hidden;

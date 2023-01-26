@@ -1,0 +1,32 @@
+.FooterWrapper{
+    background-color: #e4e4e4;
+    color: #161616;
+    padding: 30px 0 0 0;
+
+
+    .FooterMenu{
+
+        width: 100vw;
+        margin: 70px 0 70px 0;
+        display: flex;
+        justify-content: center;
+
+        ul{
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            gap: 6.5rem;
+            justify-content: center;
+
+            a{
+                color: #161616;
+                text-decoration: none;
+            }
+
+            li{
+                text-align: center;
+                font-size: x-large;
+            }
+        }
+    }
+}

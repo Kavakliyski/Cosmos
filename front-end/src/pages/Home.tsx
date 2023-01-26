@@ -1,7 +1,9 @@
 
+import CosmosLogo from "../components/HomePage/CosmosLogo"
 import Hero from "../components/HomePage/Hero"
 
 import styled from "styled-components"
+import HeroSecond from "../components/HomePage/HeroSecond"
 
 
 const HomeWrapper = styled.div`
@@ -15,6 +17,8 @@ function Home() {
     return (
         <HomeWrapper>
             <Hero />
+            <CosmosLogo />
+            <HeroSecond />
         </HomeWrapper>
     )
 }

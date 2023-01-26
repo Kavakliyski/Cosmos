@@ -33,8 +33,12 @@ function Header() {
 
                 <div className='Links1'>
                     <ul>
-                        <li>за нас</li>
-                        <li>филми</li>
+                        <Link to="/about">
+                            <li>за нас</li>
+                        </Link>
+                        <Link to="/films">
+                            <li>филми</li>
+                        </Link>
                     </ul>
                 </div>
 
