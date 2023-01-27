@@ -29,8 +29,7 @@ function Header() {
     return (
         <div className='Header'>
             <nav className='nav'>
-
-
+                
                 <div className='Links1'>
                     <ul>
                         <Link to="/about">
