@@ -1,12 +1,10 @@
 .Header {
-    position: fixed;
+    position: absolute;
     color: #E4E4E4;
     background-color: #1d0623;
     width: 100vw;
-    top: 0px;
-    left: 0px;
-    height: auto;
-    z-index: 1;
+    height: 15vh;
+
 
     .nav {
 

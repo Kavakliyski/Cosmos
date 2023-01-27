@@ -1,24 +1,15 @@
 
-
+import FilmsList from '../components/Films/FilmsList';
+import '../styles/Films_styles/Films.scss';
 
 
 function Films() {
 
 
     return (
-        <div>
-            <p>Films1</p>
-            <p>Films2</p>
-            <p>Films3</p>
-            <p>Films</p>
-            <p>Films</p>
-            <p>Films</p>
-            <p>Films</p>
-            <p>Films</p>
-            <p>Films</p>
-            <p>Films</p>
-            <p>Films</p>
-
+        <div className='FilmsDivWrapper'>
+            <h1>Филми</h1>
+            <FilmsList />
         </div>
     )
 }
