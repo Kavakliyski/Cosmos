@@ -3,6 +3,9 @@
     color: #161616;
     padding: 30px 0 0 0;
 
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 
     .FooterMenu{
 
