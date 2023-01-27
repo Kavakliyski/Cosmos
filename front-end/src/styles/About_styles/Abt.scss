@@ -1,0 +1,68 @@
+// Picture is on the right
+.AbtWrapperRight {
+    padding-bottom: 100px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 2fr;
+
+    .AbtTextContainer {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+
+        h2 {
+            width: 25vw;
+            text-align: center;
+            font-size: 2vw;
+            text-transform: uppercase;
+            padding-bottom: 40px;
+        }
+
+        p {
+            width: 25vw;
+            text-align: left;
+            font-size: large;
+        }
+    }
+
+    .AbtImageContainer {}
+
+}
+
+
+
+// Picture on the left
+.AbtWrapperLeft {
+    padding-bottom: 100px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 2fr 1fr;
+
+    .AbtTextContainer {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+
+        h2 {
+            width: 25vw;
+            text-align: center;
+            font-size: 2vw;
+            text-transform: uppercase;
+            padding-bottom: 40px;
+        }
+
+        p {
+            width: 25vw;
+            text-align: left;
+            font-size: large;
+        }
+    }
+
+    .AbtImageContainer {}
+}

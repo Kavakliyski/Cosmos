@@ -1,23 +1,16 @@
 
+import AboutList from '../components/AboutPage/AboutList';
+import '../styles/About_styles/AboutPage.scss';
+
 
 
 function About() {
 
 
     return (
-        <div>
-            <p>About1</p>
-            <p>About2</p>
-            <p>About3</p>
-            <p>About</p>
-            <p>About</p>
-            <p>About</p>
-            <p>About</p>
-            <p>About</p>
-            <p>About</p>
-            <p>About</p>
-            <p>About</p>
-            
+        <div className="AboutPageWrapper">
+            <h1>за нас</h1>
+            <AboutList />
         </div>
     )
 }

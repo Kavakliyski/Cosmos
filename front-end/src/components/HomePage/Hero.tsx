@@ -12,11 +12,17 @@ const HeroBanner = styled.img`
     overflow: hidden;
 `
 
+const Heading = styled.h1`
+    text-transform: uppercase;
+`
+
+
 function Hero() {
 
 
     return (
         <div>
+            <Heading>проект сияние</Heading>
             <HeroBanner src={hero} alt='' />
         </div>
     )
