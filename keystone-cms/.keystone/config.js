@@ -189,6 +189,17 @@ var session = (0, import_session.statelessSessions)({
   secret: sessionSecret
 });
 
+// storage.ts
+var images = {
+  kind: "local",
+  type: "image",
+  generateUrl: (path) => `${process.env.baseUrl}/images${path}`,
+  serverRoute: {
+    path: "/images"
+  },
+  storagePath: "public/images"
+};
+
 // keystone.ts
 var keystone_default = withAuth(
   (0, import_core2.config)({
@@ -197,7 +208,8 @@ var keystone_default = withAuth(
       url: "file:./keystone.db"
     },
     lists,
-    session
+    session,
+    images
   })
 );
 // Annotate the CommonJS export names for ESM import in node:
