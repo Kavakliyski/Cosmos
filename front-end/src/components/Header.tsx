@@ -1,3 +1,5 @@
+// react
+import { useState } from 'react';
 
 // styles
 import '../styles/Header_Footer/Header.scss';
@@ -11,6 +13,9 @@ import cart from '../assets/cart.svg';
 
 // react router dom
 import { NavLink, Link, useHref } from 'react-router-dom'
+
+// Shopping drawer
+import Drawer from './ShoppingDrawer/Drawer';
 
 
 const LogoSVG = styled.img`
@@ -26,10 +31,23 @@ const CartSVG = styled.img`
 function Header() {
 
 
+    const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+    const handleCartClick = () => {
+        console.log('handleCartClick');
+        setIsDrawerOpen(!isDrawerOpen);
+    };
+
+    const handleCloseDrawer = () => {
+        console.log('handleCloseDrawer');
+        setIsDrawerOpen(false);
+    };
+
+
     return (
         <div className='Header'>
             <nav className='nav'>
-                
+
                 <div className='Links1'>
                     <ul>
                         <Link to="/about">
@@ -50,9 +68,16 @@ function Header() {
                 <div className='Links2'>
                     <ul>
                         <Link to="/shop"><li>магазин</li></Link>
-                        <li><CartSVG src={cart} /></li>
+                        <li>
+                            <div onClick={handleCartClick} style={{ cursor: 'pointer'}}>
+                                <CartSVG src={cart} onClick={handleCartClick} />
+                            </div>
+                        </li>
                     </ul>
                 </div>
+
+                <Drawer isOpen={isDrawerOpen} onClose={handleCloseDrawer} />
+
             </nav>
 
         </div>

@@ -1,5 +1,6 @@
 
-import hero from '../../assets/heroimg.png';
+import { useEffect, useState } from 'react';
+import heroIMG from '../../assets/heroimg.png';
 import styled from 'styled-components';
 
 
@@ -10,11 +11,20 @@ const ImageContainer = styled.div`
 
 `
 
-const HeroBanner = styled.img`
+const HeroBanner = styled.img<{ loaded: boolean }>`
     width: 100vw;
     max-width: 100%;
     height: auto;    
     position: relative;
+
+    opacity: ${(props) => (props.loaded ? 1 : 0)};
+    transition: opacity ease-in-out;
+    transition-duration: 2s; /* Increase the duration to 4 seconds */
+
+`
+
+const TextWrapper = styled.div<{ loaded: boolean }>`
+
 `
 
 const Heading = styled.h1`
@@ -53,14 +63,27 @@ const Date = styled.h1`
 
 
 function Hero() {
+    const [loaded, setLoaded] = useState(false);
 
+
+    const handleImageLoad = () => {
+        setLoaded(true);
+    };
+
+    useEffect(() => {
+        const image = new Image();
+        image.onload = handleImageLoad;
+        image.src = heroIMG;
+    }, []);
 
     return (
         <ImageContainer>
-            <HeroBanner src={hero} alt='' />
-            <Heading>проект</Heading>
-            <SubHeading>сияние</SubHeading>
-            <Date>23.08.2023</Date>
+            <HeroBanner src={heroIMG} alt='' loaded={loaded} />
+            <TextWrapper loaded={loaded}>
+                <Heading>проект</Heading>
+                <SubHeading>сияние</SubHeading>
+                <Date>23.08.2023</Date>
+            </TextWrapper>
         </ImageContainer >
     )
 }

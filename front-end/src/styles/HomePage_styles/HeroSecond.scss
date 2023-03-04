@@ -1,16 +1,6 @@
 .HeroSecondWrapper {
     width: 100vw;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    .HeroSecondLogo {
-
-        position: absolute;
-        
-    }
-
+    position: relative;
     img {
         width: 100vw;
     }
