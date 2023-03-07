@@ -49,14 +49,6 @@
         justify-content: center;
         width: auto;
 
-        h2 {
-            width: 25vw;
-            text-align: center;
-            font-size: 2vw;
-            text-transform: uppercase;
-            padding-bottom: 40px;
-        }
-
         p {
             width: 25vw;
             text-align: left;
@@ -65,4 +57,39 @@
     }
 
     .AbtImageContainer {}
+}
+
+
+
+@media (max-width: 980px) {
+    
+    .AbtWrapperRight {
+        display: flex !important;
+        flex-direction: column;
+
+        .AbtTextContainer {
+            display: flex !important;
+
+            p {
+                width: 90vw;
+                text-align: left;
+                font-size: large;
+            }
+        }
+    }
+
+    .AbtWrapperLeft {
+        display: flex !important;
+        flex-direction: column;
+
+        .AbtTextContainer {
+            display: flex !important;
+
+            p {
+                width: 90vw;
+                text-align: left;
+                font-size: large;
+            }
+        }
+    }
 }
