@@ -12,19 +12,18 @@ import logo from '../assets/logo.svg';
 import cart from '../assets/cart.svg';
 
 // react router dom
-import { NavLink, Link, useHref } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 // Shopping drawer
 import Drawer from './ShoppingDrawer/Drawer';
 
 
 const LogoSVG = styled.img`
-    width: 20vw;
+    width: 22em;
 `
 
 const CartSVG = styled.img`
-    width: 1.9vw;
-
+    width: 1.3em;
 `
 
 
@@ -69,7 +68,7 @@ function Header() {
                     <ul>
                         <Link to="/shop"><li>магазин</li></Link>
                         <li>
-                            <div onClick={handleCartClick} style={{ cursor: 'pointer'}}>
+                            <div onClick={handleCartClick} style={{ cursor: 'pointer' }}>
                                 <CartSVG src={cart} onClick={handleCartClick} />
                             </div>
                         </li>
