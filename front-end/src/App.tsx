@@ -23,7 +23,9 @@ function App() {
 
     return (
         <div className="App">
+
             <Header />
+
             <Routes>
                 <Route index element={<Home />} />
                 <Route path="/about" element={<About />} />
@@ -34,7 +36,9 @@ function App() {
                 <Route path="/shop" element={<Careers />} />
                 <Route path="*" element={<h1>Not Found</h1>} />
             </Routes>
+
             <Footer />
+
         </div>
     )
 }

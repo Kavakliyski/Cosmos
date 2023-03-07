@@ -1,5 +1,5 @@
 .Header {
-    position: absolute;
+    // position: absolute;
     color: #E4E4E4;
     background-color: #1d0623;
     width: 100vw;
@@ -7,28 +7,29 @@
     top: 0px;
     z-index: 5;
 
-    -webkit-user-select: none;
     /* Safari */
-    -ms-user-select: none;
+    -webkit-user-select: none;
     /* IE 10 and IE 11 */
-    user-select: none;
+    -ms-user-select: none;
     /* Standard syntax */
+    user-select: none;
 
     .nav {
 
+        display: flex;
+
         .LogoDiv {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 30px;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin-top: 70px;
         }
 
         .Links1 {
 
             position: absolute;
-            top: 40px;
-            left: 0px;
-            padding-left: 100px;
+            margin-top: 30px;
+            width: 100px;
 
             ul {
                 display: flex;
@@ -57,9 +58,8 @@
         .Links2 {
 
             position: absolute;
-            top: 40px;
+            margin-top: 30px;
             right: 0px;
-            padding-right: 100px;
 
 
             ul {
@@ -83,6 +83,50 @@
                 justify-content: center;
                 vertical-align: middle;
             }
+        }
+    }
+
+
+    @media (max-width: 768px) {
+
+        padding: 0px 0px 0px 0px;
+        margin: 0px 0px 0px 0px;
+
+        height: 280px;
+
+        .Links1 {
+
+            margin-top: 100px !important;
+            width: auto !important;
+
+
+            ul {
+
+                flex-direction: column !important;
+                padding: 0px 0px 0px 0px;
+                margin: 0px 0px 0px 0px;
+
+                li {
+                    padding: 26px;
+                }
+            }
+        }
+
+        .Links2 {
+
+            margin-top: 100px !important;
+            width: auto !important;
+
+            ul {
+                flex-direction: column !important;
+                padding: 0px 0px 0px 0px !important;
+                margin: 0px 0px 0px 0px;
+
+                li {
+                    padding: 26px;
+                }
+            }
+
         }
     }
 }

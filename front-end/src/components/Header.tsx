@@ -19,7 +19,11 @@ import Drawer from './ShoppingDrawer/Drawer';
 
 
 const LogoSVG = styled.img`
-    width: 22em;
+    width: 27em;
+
+    @media (max-width: 768px) {
+        width: 22em;
+    }
 `
 
 const CartSVG = styled.img`
@@ -29,6 +33,8 @@ const CartSVG = styled.img`
 
 function Header() {
 
+    // sandwich
+    const [menuOpen, setMenuOpen] = useState(false);
 
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
@@ -66,9 +72,11 @@ function Header() {
 
                 <div className='Links2'>
                     <ul>
-                        <Link to="/shop"><li>магазин</li></Link>
+                        <Link to="/shop">
+                            <li>магазин</li>
+                        </Link>
                         <li>
-                            <div onClick={handleCartClick} style={{ cursor: 'pointer' }}>
+                            <div className='ShoppingCart' onClick={handleCartClick} style={{ cursor: 'pointer' }}>
                                 <CartSVG src={cart} onClick={handleCartClick} />
                             </div>
                         </li>

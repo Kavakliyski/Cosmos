@@ -82,6 +82,11 @@ const LearnMoreButton = styled.button`
     Link{
         text-decoration: none;
     }
+
+    @media (max-width: 768px) {
+        font-size: 20px;
+        width: 60vw;
+    }
 `
 
 
