@@ -2,20 +2,20 @@
 import { useState } from 'react';
 
 // styles
-import '../styles/Header_Footer/Header.scss';
+import '../../styles/Header_Footer/Header.scss';
 import styled from 'styled-components';
 
 // logo
-import logo from '../assets/logo.svg';
+import logo from '../../assets/logo.svg';
 
 // cart svg
-import cart from '../assets/cart.svg';
+import cart from '../../assets/cart.svg';
 
 // react router dom
 import { Link } from 'react-router-dom'
 
 // Shopping drawer
-import Drawer from './ShoppingDrawer/Drawer';
+import Drawer from '../ShoppingDrawer/Drawer';
 
 
 const LogoSVG = styled.img`

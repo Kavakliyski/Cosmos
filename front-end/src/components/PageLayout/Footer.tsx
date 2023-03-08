@@ -1,9 +1,9 @@
 // styles
-import '../styles/Header_Footer/Footer.scss';
+import '../../styles/Header_Footer/Footer.scss';
 import styled from 'styled-components';
 
 // logo
-import logo from '../assets/logo_black.svg';
+import logo from '../../assets/logo_black.svg';
 
 // router
 import { Link } from 'react-router-dom';
