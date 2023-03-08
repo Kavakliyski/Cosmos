@@ -13,7 +13,7 @@ const DrawerContainer = styled.div`
     transition: transform 0.3s ease-in-out;
     transform: translateX(100%);
     border-radius: 30px 0px 0px 12px;;
-    z-index: 3;
+    z-index: 6;
 `
 
 const CloseDrawerButton = styled.div`
