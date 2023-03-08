@@ -16,6 +16,7 @@ import About from './pages/About';
 import Terms from './pages/Terms';
 import Faq from './pages/Faq';
 import Careers from './pages/Careers';
+import { HeaderNew } from './components/PageLayout/HeaderNew';
 
 
 function App() {
@@ -24,7 +25,8 @@ function App() {
     return (
         <div className="App">
 
-            <Header />
+            <HeaderNew />
+            {/* <Header /> */}
 
             <Routes>
                 <Route index element={<Home />} />

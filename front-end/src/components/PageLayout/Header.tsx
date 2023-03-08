@@ -26,8 +26,8 @@ const LogoSVG = styled.img`
     }
 `
 
-const CartSVG = styled.img`
-    width: 1.3em;
+const CartSVG = styled.img` 
+    width: 0.3rem !important;
 `
 
 
@@ -55,12 +55,8 @@ function Header() {
 
                 <div className='Links1'>
                     <ul>
-                        <Link to="/about">
-                            <li>за нас</li>
-                        </Link>
-                        <Link to="/films">
-                            <li>филми</li>
-                        </Link>
+                        <Link to="/about"><li>за нас</li></Link>
+                        <Link to="/films"><li>филми</li></Link>
                     </ul>
                 </div>
 
@@ -72,9 +68,7 @@ function Header() {
 
                 <div className='Links2'>
                     <ul>
-                        <Link to="/shop">
-                            <li>магазин</li>
-                        </Link>
+                        <Link to="/shop"><li>магазин</li></Link>
                         <li>
                             <div className='ShoppingCart' onClick={handleCartClick} style={{ cursor: 'pointer' }}>
                                 <CartSVG src={cart} onClick={handleCartClick} />
