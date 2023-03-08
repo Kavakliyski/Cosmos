@@ -14,14 +14,27 @@
         color: #161616;
         text-transform: uppercase;
 
-        .FilmTextContainerTitle {
+        .FilmTextContainerTitleRight {
             display: flex;
             justify-content: center;
 
-            h2 {
+            h3 {
                 direction: rtl;
                 transform: rotate(-90deg);
-                font-size: 2vw;
+                font-size: 2vw !important;
+                // height: 300px;
+                width: 250px;
+            }
+        }
+
+        .FilmTextContainerTitleLeft {
+            display: flex;
+            justify-content: center;
+
+            h3 {
+                direction: rtl;
+                transform: rotate(90deg);
+                font-size: 2vw !important;
                 // height: 300px;
                 width: 250px;
             }
@@ -33,7 +46,7 @@
 
             p {
                 font-weight: 100;
-                font-size: 6vw;
+                font-size: 6vw !important;
             }
         }
     }
@@ -42,24 +55,5 @@
         margin-right: 20px;
         justify-self: end;
 
-        .FilmImageText {
-            color: red;
-            // position: absolute;
-            // top: 50%;
-            // left: 50%;
-            // transform: translate(-50%, -50%);
-            // direction: ltr;
-
-            h2 {
-
-
-                text-transform: uppercase;
-            }
-
-            p {
-                
-
-            }
-        }
     }
 }

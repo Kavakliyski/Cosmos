@@ -49,9 +49,14 @@
                 display: inline-block;
                 padding-left: 30px;
                 padding-right: 30px;
-                width: 200px;
+                width: 90px;
                 justify-content: center;
                 vertical-align: middle;
+
+
+                &:hover {
+                    border-bottom: #E4E4E4 solid;
+                }
             }
         }
 
@@ -84,9 +89,18 @@
                 width: 200px;
                 justify-content: center;
                 vertical-align: middle;
+                height: 100%;
+            }
+
+            li:nth-child(1) {
+                &:hover {
+                    border-bottom: #E4E4E4 solid;
+                }
             }
         }
     }
+
+
 
 
     @media (max-width: 1300px) {
