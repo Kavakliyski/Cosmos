@@ -1,3 +1,4 @@
+import { ShopMenu } from "../components/ShopComponents/ShopMenu"
 
 
 function Shop() {
@@ -5,34 +6,8 @@ function Shop() {
 
     return (
         <div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non dignissimos, libero aliquam placeat voluptas veritatis dolor. Odio molestias veritatis cum?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non dignissimos, libero aliquam placeat voluptas veritatis dolor. Odio molestias veritatis cum?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non dignissimos, libero aliquam placeat voluptas veritatis dolor. Odio molestias veritatis cum?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non dignissimos, libero aliquam placeat voluptas veritatis dolor. Odio molestias veritatis cum?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non dignissimos, libero aliquam placeat voluptas veritatis dolor. Odio molestias veritatis cum?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non dignissimos, libero aliquam placeat voluptas veritatis dolor. Odio molestias veritatis cum?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non dignissimos, libero aliquam placeat voluptas veritatis dolor. Odio molestias veritatis cum?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non dignissimos, libero aliquam placeat voluptas veritatis dolor. Odio molestias veritatis cum?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non dignissimos, libero aliquam placeat voluptas veritatis dolor. Odio molestias veritatis cum?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non dignissimos, libero aliquam placeat voluptas veritatis dolor. Odio molestias veritatis cum?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non dignissimos, libero aliquam placeat voluptas veritatis dolor. Odio molestias veritatis cum?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non dignissimos, libero aliquam placeat voluptas veritatis dolor. Odio molestias veritatis cum?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non dignissimos, libero aliquam placeat voluptas veritatis dolor. Odio molestias veritatis cum?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non dignissimos, libero aliquam placeat voluptas veritatis dolor. Odio molestias veritatis cum?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non dignissimos, libero aliquam placeat voluptas veritatis dolor. Odio molestias veritatis cum?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non dignissimos, libero aliquam placeat voluptas veritatis dolor. Odio molestias veritatis cum?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non dignissimos, libero aliquam placeat voluptas veritatis dolor. Odio molestias veritatis cum?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non dignissimos, libero aliquam placeat voluptas veritatis dolor. Odio molestias veritatis cum?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non dignissimos, libero aliquam placeat voluptas veritatis dolor. Odio molestias veritatis cum?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non dignissimos, libero aliquam placeat voluptas veritatis dolor. Odio molestias veritatis cum?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non dignissimos, libero aliquam placeat voluptas veritatis dolor. Odio molestias veritatis cum?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non dignissimos, libero aliquam placeat voluptas veritatis dolor. Odio molestias veritatis cum?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non dignissimos, libero aliquam placeat voluptas veritatis dolor. Odio molestias veritatis cum?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non dignissimos, libero aliquam placeat voluptas veritatis dolor. Odio molestias veritatis cum?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non dignissimos, libero aliquam placeat voluptas veritatis dolor. Odio molestias veritatis cum?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non dignissimos, libero aliquam placeat voluptas veritatis dolor. Odio molestias veritatis cum?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non dignissimos, libero aliquam placeat voluptas veritatis dolor. Odio molestias veritatis cum?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non dignissimos, libero aliquam placeat voluptas veritatis dolor. Odio molestias veritatis cum?</p>
+            <h1>Магазин</h1>
+            <ShopMenu />
         </div>
     )
 }

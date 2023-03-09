@@ -1,0 +1,15 @@
+.ShopItemPreviewContainer {
+
+    padding: 0 4rem 0 4rem;
+
+    img {
+        position: relative;
+        top: 0;
+        width: 40vw;
+    }
+
+    .ProductSizeContainer {
+        display: flex;
+        gap: 1rem;
+    }
+}

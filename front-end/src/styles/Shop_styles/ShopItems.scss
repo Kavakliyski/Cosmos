@@ -1,0 +1,33 @@
+.ShopItemsContaier {
+    background-color: #1d0623;
+    padding: 4rem 0rem 0rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .ProductContainer {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+
+
+        .ProductImage {
+
+            img {
+                height: 120px;
+                cursor: pointer;
+
+                &:hover {
+                    // transform: rotate(1deg);
+                    transition: 10ms ease-in-out;
+                }
+            }
+        }
+
+        .ProductArrow {
+            grid-column-start: end;
+            // transform: translateY(-50%) translateX(10px);
+            transition: transform 0.3s ease-in-out;
+        }
+    }
+
+}
