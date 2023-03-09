@@ -30,16 +30,9 @@ export const ShopItems = ({ products, onImageClick, arrow }: ShopItemsProps) => 
                                 alt={product.alt}
                                 onClick={() => onImageClick(product)} />
                         </div>
-                        {
-                            arrow === product.id ? 
-                            <div className="ProductArrow" style={{ opacity: 1 }}>
-                                <Arrow src={SvgArrow} />
-                            </div>
-                            :
-                            ""
-
-                        }
-
+                        <div className="ProductArrow" style={{ opacity: arrow === product.id ? 1 : 0 }}>
+                            <Arrow src={SvgArrow} />
+                        </div>
                     </div>
                 ))
             }

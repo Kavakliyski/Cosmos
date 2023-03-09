@@ -1,6 +1,6 @@
 .ShopItemsContaier {
     background-color: #1d0623;
-    padding: 4rem 0rem 0rem 4rem;
+    padding: 4rem 0.5rem 2rem 4rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -14,6 +14,7 @@
 
             img {
                 height: 120px;
+                width: 200px;
                 cursor: pointer;
 
                 &:hover {
@@ -25,8 +26,8 @@
 
         .ProductArrow {
             grid-column-start: end;
-            // transform: translateY(-50%) translateX(10px);
-            transition: transform 0.3s ease-in-out;
+            transform: translateY(0) translateX(10px);
+            transition: opacity 0.3s ease-in-out;
         }
     }
 

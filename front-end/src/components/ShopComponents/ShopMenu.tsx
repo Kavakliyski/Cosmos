@@ -30,8 +30,8 @@ export const ShopMenu = () => {
         { id: 'id6', src: Cloth6, alt: 'Cloth 6', description: 'kjhg6' },
     ];
 
-    const [selectedImage, setSelectedImage] = useState<ProductsProps | null>(null);
-    const [selectedItemId, setSelectedItemId] = useState<string | null>(null);
+    const [selectedImage, setSelectedImage] = useState<ProductsProps | null>(products[0]);
+    const [selectedItemId, setSelectedItemId] = useState<string | null>(products[0].id);
 
 
     const handleImageClick = (products: ProductsProps) => {
@@ -46,7 +46,7 @@ export const ShopMenu = () => {
     return (
         <div className="ShopContainer">
             <ShopItems products={products} onImageClick={handleImageClick} arrow={selectedItemId} />
-            <ShopItemPreview img={selectedImage} />
+            <ShopItemPreview product={selectedImage} />
         </div>
     )
 }

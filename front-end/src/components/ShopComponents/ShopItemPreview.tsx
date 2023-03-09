@@ -8,7 +8,7 @@ import { ProductsProps } from "../../interfaces/IProducts";
 
 const ProductDescription = styled.p`
     color: #161616;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
 `
 
 const ProductPrice = styled.p`
@@ -46,26 +46,26 @@ const OrderButton = styled.button`
 `
 
 
-export const ShopItemPreview = ({ img }: { img: ProductsProps | null }) => {
+export const ShopItemPreview = ({ product }: { product: ProductsProps | null }) => {
 
-    if (!img) {
-        return null; // or return some default content
+    if (!product) {
+        return null;
     }
 
     return (
 
         <div className="ShopItemPreviewContainer">
-            <img src={img.src} />
-            <h5>{img.alt}</h5>
+            <img src={product.src} />
+            <h5>{product.alt}</h5>
             <br />
-            <ProductDescription>{img.description}</ProductDescription>
+            <ProductDescription>{product.description}</ProductDescription>
             <div className="ProductSizeContainer">
                 <SizeButton>S</SizeButton>
                 <SizeButton>M</SizeButton>
                 <SizeButton>L</SizeButton>
                 <SizeButton>XL</SizeButton>
             </div>
-            <ProductPrice>{img.price}</ProductPrice>
+            <ProductPrice>{product.price}</ProductPrice>
             <OrderButton>Поръчай сега</OrderButton>
         </div>
     )
