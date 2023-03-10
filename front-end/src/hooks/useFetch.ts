@@ -14,10 +14,10 @@ const useFetch = (url: string) => {
 
             try {
                 const res = await fetch(url)
-                .then((response) => response.json())
-                .then((responseData) => {
-                    setData(responseData);
-                })
+                    .then((response) => response.json())
+                    .then((responseData) => {
+                        setData(responseData);
+                    })
 
                 setLoading(false);
             } catch (err) {

@@ -19,53 +19,55 @@ import { Product, ProductsProps } from "../../interfaces/IProducts";
 // react
 import { useEffect, useState } from "react";
 
-// hooks
-import useFetch from "../../hooks/useFetch";
+// axios
+import axios from "axios";
 
 
 export const ShopMenu = () => {
 
-    const { data, error, loading } = useFetch('http://localhost:1337/api/products');
-
-    const products: ProductsProps[] = [
-        { id: 'id1', src: Cloth1, alt: 'тениска космос', description: 'Брандирана тениска "Космос" от премиум материали.', price: '40 лева' },
-        { id: 'id2', src: Cloth2, alt: 'Cloth 2', description: 'gfdsafdsa2' },
-        { id: 'id3', src: Cloth3, alt: 'Cloth 3', description: 'gfdsgfd3' },
-        { id: 'id4', src: Cloth4, alt: 'Cloth 4', description: 'gfdgfssg4' },
-        { id: 'id5', src: Cloth5, alt: 'Cloth 5', description: 'gfds5' },
-        { id: 'id6', src: Cloth6, alt: 'Cloth 6', description: 'kjhg6' },
-    ];
-
-    const [selectedImage, setSelectedImage] = useState<ProductsProps | null>(products[0]);
-    const [selectedItemId, setSelectedItemId] = useState<string | null>(products[0].id);
+    const [data, setData] = useState<any>(null);
+    const [error, setError] = useState<any | null>(null);
+    const [loading, setLoading] = useState<boolean>(true);
 
 
-    const handleImageClick = (products: ProductsProps) => {
+    useEffect(() => {
 
-        setSelectedItemId(products.id);
+        setLoading(true);
 
-        setSelectedImage(products);
+        axios.get("http://localhost:1337/api/products?populate=*")
+            .then((response) => {
+                // console.log(response.data.data);
+                setData(response.data.data);
+                setLoading(false);
+            })
+            .catch(error => {
+                setError(error);
+                console.log(error);
+                setLoading(false);
+            });
+    }, [])
+
+
+    const [selectedImage, setSelectedImage] = useState<ProductsProps | null>(data && data[0]);
+    const [selectedItemId, setSelectedItemId] = useState<string | null>(data && data[0].id);
+
+    const handleImageClick = (data: ProductsProps) => {
+
+        setSelectedItemId(data.id);
+
+        setSelectedImage(data);
 
     };
 
-    
-    if (!data) return <p>loading</p>
 
     return (
-        <div className="ShopContainer">
-            {
-                data.map((product: any) => (
-                    <div key={product.id}>
-                        <p>{product.Title}</p>
-                        <p>{product.title}</p>
-                        <p>{product.title}</p>
-                        <p>{product.title}</p>
-                    </div>
-                ))
-            }
+        <>
+            <div className="ShopContainer">
 
-            {/* <ShopItems products={products2} onImageClick={handleImageClick} arrow={selectedItemId} /> */}
-            {/* <ShopItemPreview product={selectedImage} /> */}
-        </div>
+
+                <ShopItems products={data} onImageClick={handleImageClick} arrow={selectedItemId} />
+                <ShopItemPreview products={data} product={selectedImage} />
+            </div>
+        </>
     )
 }

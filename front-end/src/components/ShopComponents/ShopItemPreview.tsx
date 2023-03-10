@@ -46,7 +46,7 @@ const OrderButton = styled.button`
 `
 
 
-export const ShopItemPreview = ({ product }: { product: ProductsProps | null }) => {
+export const ShopItemPreview = ({ product, products }: { product: ProductsProps | null, products: ProductsProps }) => {
 
     if (!product) {
         return null;
@@ -55,17 +55,17 @@ export const ShopItemPreview = ({ product }: { product: ProductsProps | null }) 
     return (
 
         <div className="ShopItemPreviewContainer">
-            <img src={product.src} />
-            <h5>{product.alt}</h5>
+            <img src={`http://localhost:1337${product.attributes.image.data.attributes.url}`} />
+            <h5>{product.attributes.Title}</h5>
             <br />
-            <ProductDescription>{product.description}</ProductDescription>
+            <ProductDescription>{product.attributes.Description}</ProductDescription>
             <div className="ProductSizeContainer">
                 <SizeButton>S</SizeButton>
                 <SizeButton>M</SizeButton>
                 <SizeButton>L</SizeButton>
                 <SizeButton>XL</SizeButton>
             </div>
-            <ProductPrice>{product.price}</ProductPrice>
+            <ProductPrice>{product.attributes.Price}</ProductPrice>
             <OrderButton>Поръчай сега</OrderButton>
         </div>
     )

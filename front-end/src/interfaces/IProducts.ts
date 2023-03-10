@@ -5,6 +5,7 @@ export interface ProductsProps {
     description?: string;
     price?: string;
     data?: object;
+    attributes?: any;
 }
 
 export interface ShopItemsProps {
@@ -14,7 +15,9 @@ export interface ShopItemsProps {
 };
 
 export interface Product {
-    data: any;
     id: number;
     title: string;
+    products: any;
+    product: any;
+    data: any
 }

@@ -21,7 +21,7 @@ export const ShopItems = ({ products, onImageClick, arrow }: ShopItemsProps) => 
 
     return (
         <div className="ShopItemsContaier">
-            {
+            {/* {
                 products.map((product: any) => (
                     <div key={product.id} className="ProductContainer">
                         <div className="ProductImage">
@@ -33,6 +33,24 @@ export const ShopItems = ({ products, onImageClick, arrow }: ShopItemsProps) => 
                         <div className="ProductArrow" style={{ opacity: arrow === product.id ? 1 : 0 }}>
                             <Arrow src={SvgArrow} />
                         </div>
+                    </div>
+                ))
+            } */}
+
+            {
+                products && products.map((product: any) => (
+                    <div key={product.id} className="ProductContainer">
+                        <div className="ProductImage">
+                            <img
+                                src={`http://localhost:1337${product.attributes.image.data.attributes.url}`}
+                                onClick={() => onImageClick(product)}
+                            />
+
+                        </div>
+                        <div className="ProductArrow" style={{ opacity: arrow === product.id ? 1 : 0 }}>
+                            <Arrow src={SvgArrow} />
+                        </div>
+
                     </div>
                 ))
             }
