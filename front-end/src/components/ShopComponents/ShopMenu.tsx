@@ -14,12 +14,18 @@ import Cloth5 from "../../assets/forShop/cloth5.jpg"
 import Cloth6 from "../../assets/forShop/cloth6.jpg"
 
 // IF
-import { ProductsProps } from "../../interfaces/IProducts";
+import { Product, ProductsProps } from "../../interfaces/IProducts";
 
-import { useState } from "react";
+// react
+import { useEffect, useState } from "react";
+
+// hooks
+import useFetch from "../../hooks/useFetch";
 
 
 export const ShopMenu = () => {
+
+    const { data, error, loading } = useFetch('http://localhost:1337/api/products');
 
     const products: ProductsProps[] = [
         { id: 'id1', src: Cloth1, alt: 'тениска космос', description: 'Брандирана тениска "Космос" от премиум материали.', price: '40 лева' },
@@ -42,11 +48,24 @@ export const ShopMenu = () => {
 
     };
 
+    
+    if (!data) return <p>loading</p>
 
     return (
         <div className="ShopContainer">
-            <ShopItems products={products} onImageClick={handleImageClick} arrow={selectedItemId} />
-            <ShopItemPreview product={selectedImage} />
+            {
+                data.map((product: any) => (
+                    <div key={product.id}>
+                        <p>{product.Title}</p>
+                        <p>{product.title}</p>
+                        <p>{product.title}</p>
+                        <p>{product.title}</p>
+                    </div>
+                ))
+            }
+
+            {/* <ShopItems products={products2} onImageClick={handleImageClick} arrow={selectedItemId} /> */}
+            {/* <ShopItemPreview product={selectedImage} /> */}
         </div>
     )
 }
