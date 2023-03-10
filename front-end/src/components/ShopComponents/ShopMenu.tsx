@@ -48,25 +48,23 @@ export const ShopMenu = () => {
     }, [])
 
 
-    const [selectedImage, setSelectedImage] = useState<ProductsProps | null>(data && data[0]);
-    const [selectedItemId, setSelectedItemId] = useState<string | null>(data && data[0].id);
+    const [selectedImage, setSelectedImage] = useState<ProductsProps | null>(data && data[3]);
+    const [selectedItemId, setSelectedItemId] = useState<string | null>(data && data[3]);
 
     const handleImageClick = (data: ProductsProps) => {
 
-        setSelectedItemId(data.id);
-
         setSelectedImage(data);
-
+        setSelectedItemId(data.id);
     };
 
-
+    
     return (
         <>
             <div className="ShopContainer">
 
 
                 <ShopItems products={data} onImageClick={handleImageClick} arrow={selectedItemId} />
-                <ShopItemPreview products={data} product={selectedImage} />
+                <ShopItemPreview product={selectedImage} />
             </div>
         </>
     )
