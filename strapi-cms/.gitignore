@@ -108,8 +108,8 @@ coverage
 
 .env
 license.txt
-exports
-*.cache
+# exports
+# *.cache
 dist
 build
-.strapi-updater.json
+# .strapi-updater.json

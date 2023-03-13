@@ -46,7 +46,7 @@ const OrderButton = styled.button`
 `
 
 
-export const ShopItemPreview = ({ product, products }: { product: ProductsProps | null, products: ProductsProps }) => {
+export const ShopItemPreview = ({ product }: { product: ProductsProps | null }) => {
 
     if (!product) {
         return null;

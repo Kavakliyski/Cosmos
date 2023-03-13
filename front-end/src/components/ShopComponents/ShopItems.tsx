@@ -21,22 +21,6 @@ export const ShopItems = ({ products, onImageClick, arrow }: ShopItemsProps) => 
 
     return (
         <div className="ShopItemsContaier">
-            {/* {
-                products.map((product: any) => (
-                    <div key={product.id} className="ProductContainer">
-                        <div className="ProductImage">
-                            <img
-                                src={product.src}
-                                alt={product.alt}
-                                onClick={() => onImageClick(product)} />
-                        </div>
-                        <div className="ProductArrow" style={{ opacity: arrow === product.id ? 1 : 0 }}>
-                            <Arrow src={SvgArrow} />
-                        </div>
-                    </div>
-                ))
-            } */}
-
             {
                 products && products.map((product: any) => (
                     <div key={product.id} className="ProductContainer">
