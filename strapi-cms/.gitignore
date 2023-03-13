@@ -80,7 +80,7 @@ $RECYCLE.BIN/
 ssl
 .idea
 nbproject
-# public/uploads/*
+public/uploads/*
 !public/uploads/.gitkeep
 
 ############################
@@ -108,10 +108,8 @@ coverage
 
 .env
 license.txt
-# exports
-# *.cache
-# dist
-# build
-# .strapi-updater.json
-
-dist/
+exports
+*.cache
+dist
+build
+.strapi-updater.json
