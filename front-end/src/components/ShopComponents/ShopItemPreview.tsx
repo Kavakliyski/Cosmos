@@ -1,3 +1,6 @@
+// react
+import { useState } from "react";
+
 // styles
 import "../../styles/Shop_styles/ShopItemPreview.scss";
 import styled from "styled-components";
@@ -17,19 +20,22 @@ const ProductPrice = styled.p`
     font-weight: bold;
 `
 
-const SizeButton = styled.button`
+const SizeButton = styled.button<{ isSelected: boolean }>`
     width: 40px;
     height: 40px;
     border: 1px solid #1d0623;
     border-radius: 0px;
-    color: #1d0623;
-    background-color: #e4e4e4;
+    color: ${({ isSelected }) => isSelected ? "#e4e4e4" : "#1d0623"};
+    background-color: ${({ isSelected }) => isSelected ? '#1d0623' : '#e4e4e4'};
     cursor: pointer;
     font-size: 1rem;
+    box-shadow: 0px 0px 7px 0px #1d0623;
 
     &:hover {
         color: #e4e4e4;
         background-color: #1d0623;
+        box-shadow: 0px 0px 17px 0px #1d0623;
+        transition: all 100ms
     }
 `
 
@@ -48,11 +54,21 @@ const OrderButton = styled.button`
 
 export const ShopItemPreview = ({ product }: { product: ProductsProps | null }) => {
 
-    console.log('PRODUCT',product)
+    const [size, setSize] = useState<string | null>(null);
+
+    const handleSizeSelect = (e: React.MouseEvent<HTMLButtonElement>) => {
+        setSize((e.target as HTMLButtonElement).value);
+    }
+
+    
+    const handleOrder = () => {
+
+    };
 
     if (!product) {
         return null;
     }
+
 
     return (
 
@@ -62,13 +78,13 @@ export const ShopItemPreview = ({ product }: { product: ProductsProps | null }) 
             <br />
             <ProductDescription>{product.attributes.Description}</ProductDescription>
             <div className="ProductSizeContainer">
-                <SizeButton>S</SizeButton>
-                <SizeButton>M</SizeButton>
-                <SizeButton>L</SizeButton>
-                <SizeButton>XL</SizeButton>
+                <SizeButton isSelected={size === 'S'} value={'S'} onClick={handleSizeSelect}>S</SizeButton>
+                <SizeButton isSelected={size === 'M'} value={'M'} onClick={handleSizeSelect}>M</SizeButton>
+                <SizeButton isSelected={size === 'L'} value={'L'} onClick={handleSizeSelect}>L</SizeButton>
+                <SizeButton isSelected={size === 'XL'} value={'XL'} onClick={handleSizeSelect}>XL</SizeButton>
             </div>
             <ProductPrice>{product.attributes.Price}</ProductPrice>
-            <OrderButton>Поръчай сега</OrderButton>
+            <OrderButton onClick={handleOrder}>Поръчай сега</OrderButton>
         </div>
     )
 }

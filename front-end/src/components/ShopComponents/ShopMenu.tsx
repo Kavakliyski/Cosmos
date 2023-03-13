@@ -51,7 +51,6 @@ export const ShopMenu = () => {
         setSelectedItemId(data.id);
     };
 
-    console.log('data', data && data[0]);
 
     if (loading) return <h2>Loading..</h2>
     if (error) return <h2>Error.. <br /> {error}</h2>
