@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 
 
 const LogoSVG = styled.img`
-    width: 30vw;
+    width: 20vw;
     display: block;
     margin: auto;
 `

@@ -30,11 +30,10 @@ const HoverFigure = styled.figure`
 
     figcaption {
         display: grid;
-        align-items: end;
+        align-items: start;
         font-family: sans-serif;
         font-size: 2.3rem;
         font-weight: bold;
-        color: #0000;
         padding: .75rem;
         background: var(--c,#0009);
         clip-path: inset(0 var(--_i,100%) 0 0);
@@ -65,11 +64,15 @@ const StyledH4 = styled.h4`
     text-transform: uppercase;
     font-weight: bold;
     font-size: 70px;
+    color: #e4e4e4;
+
 `
 
 const StyledPar = styled.p`
     font-size: 26px;
     padding: 0px;
+    color: #e4e4e4;
+
 `
 
 
