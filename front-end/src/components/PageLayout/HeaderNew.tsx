@@ -52,7 +52,7 @@ export const HeaderNew = () => {
             <ul className="right-links">
                 <Link to="/shop"><li>магазин</li></Link>
                 <li>
-                    <div className='ShoppingCart' onClick={handleCartClick} style={{ cursor: 'pointer' }}>
+                    <div className='ShoppingCart' onClick={handleCartClick} style={{ cursor: 'pointer', textAlign: 'center' }}>
                         <CartSVG src={cart} onClick={handleCartClick} />
                     </div>
                 </li>

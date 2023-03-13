@@ -17,15 +17,14 @@ nav {
         justify-content: center;
 
         img {
-            height: 70px;
+            height: 90px;
         }
     }
 
     ul {
         display: flex;
-        align-items: center;
         list-style: none;
-        font-size: x-large;
+        font-size: xx-large;
 
         a {
             color: #e4e4e4;
@@ -46,6 +45,10 @@ nav {
             margin-right: 11rem;
             gap: 8rem;
             margin-left: auto;
+
+            li:nth-child(2) {
+                font-size: large;
+            }
         }
     }
 
@@ -57,6 +60,10 @@ nav {
 
         .logo {
             margin: auto;
+
+            img {
+                height: 60px;
+            }
         }
 
         ul {

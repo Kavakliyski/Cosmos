@@ -48,6 +48,8 @@ const OrderButton = styled.button`
 
 export const ShopItemPreview = ({ product }: { product: ProductsProps | null }) => {
 
+    console.log('PRODUCT',product)
+
     if (!product) {
         return null;
     }
