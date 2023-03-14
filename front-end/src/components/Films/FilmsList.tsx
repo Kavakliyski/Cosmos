@@ -1,13 +1,17 @@
-
+// styles
 import '../../styles/Films_styles/FilmsList.scss';
+
+// components
 import { FilmRight, FilmLeft } from './Film';
 
-import movie_image from '../../assets/moviehero.png';
+// react
 import { useEffect, useState } from 'react';
-import { ProductsProps } from '../../interfaces/IProducts';
+import { Link } from 'react-router-dom';
+
+// axios
 import axios from 'axios';
 
-function FilmsList() {
+export const FilmsList = () => {
 
     const [films, setFilms] = useState<any>(null);
     const [error, setError] = useState<any | null>(null);
@@ -20,7 +24,8 @@ function FilmsList() {
 
         axios.get("http://localhost:1337/api/movies?populate=*")
             .then((response) => {
-                setError(null)
+                setError(null);
+                setFilms(response.data.data)
                 setLoading(false);
             })
             .catch(error => {
@@ -30,16 +35,30 @@ function FilmsList() {
             });
     }, [])
 
-    
+
+    if (loading) return <h2>Loading..</h2>
+    if (error) return <h2>Error.. <br /> {error}</h2>
+
+    console.log(films[0].id)
+
     return (
         <div className='FilmsListWrapper'>
 
-            <FilmRight title={'не поглеждай нагоре'} director={'Кристофър Нолан'} cast={'Крисчън Бейл, Морган Фрийман, Алекса Деми'} genre={'научна фантастика'} year={'2020'} movie_image={movie_image}/>
-            
-            <FilmLeft title={'не поглеждай нагоре'} director={'Кристофър Нолан'} cast={'Крисчън Бейл, Морган Фрийман, Алекса Деми'} genre={'научна фантастика'} year={'2020'} movie_image={movie_image}/>
-        
+            {
+                films.map((film: any, index: number) => {
+                    const movieImage = film.attributes.Cover?.data?.attributes?.url;
+                    return index % 2 === 0 ? (
+
+                        <Link style={{ textDecoration: 'none' }} key={`${film.id}`} to={`/films/${film.id}`}>
+                            <FilmRight title={film.attributes.Title} director={film.attributes.Director} cast={film.attributes.Cast} genre={film.attributes.Cast} year={film.attributes.Year} movie_image={movieImage} />
+                        </Link>
+                    ) : (
+                        <Link style={{ textDecoration: 'none' }} key={`${film.id}`} to={`/films/${film.id}`}>
+                            <FilmLeft title={film.attributes.Title} director={film.attributes.Director} cast={film.attributes.Cast} genre={film.attributes.Cast} year={film.attributes.Year} movie_image={movieImage} />
+                        </Link>)
+                })
+            }
+
         </div>
     )
 }
-
-export default FilmsList

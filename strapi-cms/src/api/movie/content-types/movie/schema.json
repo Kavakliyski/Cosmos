@@ -4,7 +4,8 @@
   "info": {
     "singularName": "movie",
     "pluralName": "movies",
-    "displayName": "Movie"
+    "displayName": "Movie",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,54 +13,59 @@
   "pluginOptions": {},
   "attributes": {
     "Cover": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "Poster": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "Carousel": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "Video": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "Cover2": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "Title": {
       "type": "text"
@@ -78,6 +84,11 @@
     },
     "Release_date": {
       "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "required": true,
+      "targetField": "Title"
     }
   }
 }

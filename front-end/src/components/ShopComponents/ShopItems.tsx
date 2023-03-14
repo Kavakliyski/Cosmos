@@ -5,9 +5,6 @@ import styled from "styled-components";
 // IF
 import { ShopItemsProps } from "../../interfaces/IProducts";
 
-// react
-import { useState } from "react";
-
 // arrow
 import SvgArrow from "../../assets/cosmos_arrow.svg"
 

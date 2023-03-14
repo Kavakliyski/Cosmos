@@ -18,9 +18,9 @@ const HoverFigure = styled.figure`
     border-radius: 1rem;
     overflow: hidden;
     cursor: pointer;
-
+    
     img {
-        width: 70vw;
+        width: 60vw;
     }
 
     & > * {
@@ -32,7 +32,6 @@ const HoverFigure = styled.figure`
         display: grid;
         align-items: start;
         font-family: sans-serif;
-        font-size: 2.3rem;
         font-weight: bold;
         padding: .75rem;
         background: var(--c,#0009);
@@ -94,7 +93,7 @@ export const FilmRight = ({ title, director, cast, genre, year, movie_image }: I
 
             <div className='FilmImage'>
                 <HoverFigure>
-                    <img src={movie_image} />
+                    <img src={`http://localhost:1337${movie_image}`} />
                     <figcaption>
                         <StyledH4>{title}</StyledH4>
                         <div>

@@ -17,6 +17,7 @@ import Terms from './pages/Terms';
 import Faq from './pages/Faq';
 import Careers from './pages/Careers';
 import { HeaderNew } from './components/PageLayout/HeaderNew';
+import FilmDetails from './pages/FilmDetails';
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
                 <Route index element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/films" element={<Films />} />
+                <Route path="/films/:id" element={<FilmDetails />} />
                 <Route path="/shop" element={<Shop />} />
                 <Route path="/shop" element={<Terms />} />
                 <Route path="/shop" element={<Faq />} />
