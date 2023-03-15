@@ -39,7 +39,6 @@ export const FilmsList = () => {
     if (loading) return <h2>Loading..</h2>
     if (error) return <h2>Error.. <br /> {error}</h2>
 
-    console.log(films[0].id)
 
     return (
         <div className='FilmsListWrapper'>

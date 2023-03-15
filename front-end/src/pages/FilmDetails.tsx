@@ -33,12 +33,16 @@ function FilmDetails() {
                 console.log(error);
                 setLoading(false);
             });
-    }, [])
+    }, [id])
 
+    
+    const CarouselImages = film && film.attributes.Carousel?.data.map((img: any) => {
+        return img.attributes.url
+    });
+    
 
     const CoverImage = `http://localhost:1337${film && film.attributes.Cover2?.data?.attributes?.formats?.large?.url}`;
     const PosterImage = `http://localhost:1337${film && film.attributes.Poster?.data?.attributes?.formats?.large?.url}`;
-
 
     if (loading) return <h2>Loading..</h2>
     if (error) return <h2>Error.. <br /> {error}</h2>
@@ -48,7 +52,6 @@ function FilmDetails() {
             <img className='Cover' src={CoverImage} />
 
             <div className='FilmDetailsWrapper'>
-
                 <div className='TextContainer'>
                     <h5>{film.attributes.Title}</h5>
                     <p>директор: {film.attributes.Director}</p>
@@ -58,7 +61,9 @@ function FilmDetails() {
                 </div>
 
                 <img className='PosterContainer' src={PosterImage} />
+            </div>
 
+            <div className='FilmDetailsCarousel'>
             </div>
 
         </div>
