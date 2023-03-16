@@ -36,10 +36,6 @@ function FilmDetails() {
     }, [id])
 
     
-    const CarouselImages = film && film.attributes.Carousel?.data.map((img: any) => {
-        return img.attributes.url
-    });
-    
 
     const CoverImage = `http://localhost:1337${film && film.attributes.Cover2?.data?.attributes?.formats?.large?.url}`;
     const PosterImage = `http://localhost:1337${film && film.attributes.Poster?.data?.attributes?.formats?.large?.url}`;

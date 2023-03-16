@@ -4,7 +4,7 @@ import '../../styles/HomePage_styles/CosmosLogo.scss';
 import LogoBlack from '../../assets/logo_black.svg';
 
 
-function CosmosLogo() {
+export const CosmosLogo = () => {
 
 
     return (
@@ -13,5 +13,3 @@ function CosmosLogo() {
         </div>
     )
 }
-
-export default CosmosLogo

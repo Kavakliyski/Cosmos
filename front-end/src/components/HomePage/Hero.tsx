@@ -25,42 +25,62 @@ const HeroBanner = styled.img<{ loaded: boolean }>`
 
 const TextWrapper = styled.div<{ loaded: boolean }>`
     opacity: ${({ loaded }) => (loaded ? 1 : 0)};
-    // transform: translateX(${({ loaded }) => (loaded ? "0" : "-100%")});
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    z-index: 1;
+
+    position: absolute;
+    top: 52vh;
+    padding-left: 10vw;
+    @media (max-width: 768px) {top:10.7vh;}
+
+
+    display: flex;
+    flex-direction: column;
+
+
+    .flex-item-1 {
+        display: flex;
+
+        .flex-item-1-sub-1 {
+            display: flex;
+            align-self: flex-end
+        }
+
+        .flex-item-1-sub-2 {
+            padding-top: 4vw
+        }
+    }
+
+    .flex-item-2 {
+        position: absolute;
+        top: 7vh;
+
+        @media (max-width: 768px) {
+            top: 2vh;
+        }
+    }
 `
 
 const Heading = styled.h1`
-    position: absolute;
-    top: 38%;
-    left: 27%;
-    transform: translate(-50%,-50%);
     color: #E4E4E4;
-    z-index: 1;
     font-size: 7vw;
     text-align: left;
+    margin: 0px !important;
 `
 
 const SubHeading = styled.h1`
-    position: absolute;
-    top: 45%;
-    left: 35%;
-    transform: translate(-50%,-50%);
     color: #E4E4E4;
-    z-index: 1;
     font-size: 11vw;
     text-align: left;
+    margin: 0px !important;
 `
 
 const Date = styled.h1`
-    position: absolute;
-    top: 44.5%;
-    left: 50%;
-    transform: translate(-50%,-50%);
     color: #DD3758;
-    z-index: 1;
     font-size: 3vw;
     text-align: left;
     font-weight: 100;
+    margin: 0px !important;
 `
 
 const LearnMoreButton = styled.button`
@@ -90,7 +110,7 @@ const LearnMoreButton = styled.button`
 `
 
 
-function Hero() {
+export const Hero = () => {
     const [loaded, setLoaded] = useState(false);
 
 
@@ -108,9 +128,17 @@ function Hero() {
         <ImageContainer>
             <HeroBanner src={heroIMG} alt='' loaded={loaded} />
             <TextWrapper loaded={loaded}>
-                <Heading>проект</Heading>
-                <SubHeading>сияние</SubHeading>
-                <Date>23.08.2023</Date>
+                <div className="flex-item-1">
+                    <div className="flex-item-1-sub-1">
+                        <Heading>проект</Heading>
+                    </div>
+                    <div className="flex-item-1-sub-2">
+                        <Date>23.08.2023</Date>
+                    </div>
+                </div>
+                <div className="flex-item-2">
+                    <SubHeading>сияние</SubHeading>
+                </div>
             </TextWrapper>
             <Link to="/about">
                 <LearnMoreButton>
@@ -120,5 +148,3 @@ function Hero() {
         </ImageContainer >
     )
 }
-
-export default Hero

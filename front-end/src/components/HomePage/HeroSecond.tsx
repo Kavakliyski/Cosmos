@@ -16,18 +16,15 @@ const LogoCutImg = styled.img`
 `
 
 
-function HeroSecond() {
-
+export const HeroSecond = () => {
 
     return (
         <div className='HeroSecondWrapper'>
 
-            <LogoCutImg src={LogoCutted} />
-
+            <LogoCutImg src={LogoCutted}/>
 
             <img src={MovieHero} />
         </div>
     )
 }
 
-export default HeroSecond
