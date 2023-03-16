@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkstrapi_cms=self.webpackChunkstrapi_cms||[]).push([[4816],{39987:(a,s,e)=>{e.r(s),e.d(s,{default:()=>r});var t=e(67294),n=e(95489),P=e.n(n),E=e(87751),_=e(53219);const r=()=>t.createElement(n.CheckPagePermissions,{permissions:E.Z.settings["transfer-tokens"].create},t.createElement(_.Z,null))}}]);
