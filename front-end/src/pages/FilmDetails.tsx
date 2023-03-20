@@ -22,7 +22,7 @@ function FilmDetails() {
 
         setLoading(true);
 
-        axios.get(`http://localhost:1337/api/movies/${id}?populate=*`)
+        axios.get(`${import.meta.env.VITE_STRAPI_CMS_URL}/api/movies/${id}?populate=*`)
             .then((response) => {
                 setError(null);
                 setFilm(response.data.data)
@@ -37,8 +37,8 @@ function FilmDetails() {
 
     
 
-    const CoverImage = `http://localhost:1337${film && film.attributes.Cover2?.data?.attributes?.formats?.large?.url}`;
-    const PosterImage = `http://localhost:1337${film && film.attributes.Poster?.data?.attributes?.formats?.large?.url}`;
+    const CoverImage = `${import.meta.env.VITE_STRAPI_CMS_URL}${film && film.attributes.Cover2?.data?.attributes?.formats?.large?.url}`;
+    const PosterImage = `${import.meta.env.VITE_STRAPI_CMS_URL}${film && film.attributes.Poster?.data?.attributes?.formats?.large?.url}`;
 
     if (loading) return <h2>Loading..</h2>
     if (error) return <h2>Error.. <br /> {error}</h2>

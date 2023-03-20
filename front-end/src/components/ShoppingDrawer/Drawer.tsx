@@ -30,9 +30,15 @@ const CloseDrawerButton = styled.div`
 interface DrawerProps {
     isOpen: boolean;
     onClose: () => void;
+    orderProduct?: {
+        image: string,
+        title: string,
+        price: string,
+        size: string
+    } | null;
 }
 
-const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose }) => {
+const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose, orderProduct }) => {
 
     return (
         <DrawerContainer

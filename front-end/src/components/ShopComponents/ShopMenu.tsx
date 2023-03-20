@@ -28,7 +28,7 @@ export const ShopMenu = () => {
 
         setLoading(true);
 
-        axios.get("http://localhost:1337/api/products?populate=*")
+        axios.get(`${import.meta.env.VITE_STRAPI_CMS_URL}/api/products?populate=*`)
             .then((response) => {
                 setError(null)
                 setData(response.data.data);                                                // save the respone into data const

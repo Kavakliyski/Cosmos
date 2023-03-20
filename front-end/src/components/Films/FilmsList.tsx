@@ -22,7 +22,7 @@ export const FilmsList = () => {
 
         setLoading(true);
 
-        axios.get("http://localhost:1337/api/movies?populate=*")
+        axios.get(`${import.meta.env.VITE_STRAPI_CMS_URL}/api/movies?populate=*`)
             .then((response) => {
                 setError(null);
                 setFilms(response.data.data)

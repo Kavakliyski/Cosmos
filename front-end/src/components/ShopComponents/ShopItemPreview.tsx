@@ -55,15 +55,24 @@ const OrderButton = styled.button`
 export const ShopItemPreview = ({ product }: { product: ProductsProps | null }) => {
 
     const [size, setSize] = useState<string | null>(null);
+    const [orderProduct, setOrderProduct] = useState<{ image: string, title: string, price: string, size: string } | null>(null);
 
     const handleSizeSelect = (e: React.MouseEvent<HTMLButtonElement>) => {
         setSize((e.target as HTMLButtonElement).value);
     }
 
-    
-    const handleOrder = () => {
+    const handleOrder = (image: string, title: string, price: string, size: string) => {
 
+        if (size === 'null') {
+            alert("Изберете размер")
+            return false;
+        }
+
+        const newOrderProduct = { image, title, price, size };
+        setOrderProduct(newOrderProduct);
     };
+
+    console.log(orderProduct)
 
     if (!product) {
         return null;
@@ -73,7 +82,7 @@ export const ShopItemPreview = ({ product }: { product: ProductsProps | null }) 
     return (
 
         <div className="ShopItemPreviewContainer">
-            <img src={`http://localhost:1337${product.attributes.image.data.attributes.url}`} />
+            <img src={`${import.meta.env.VITE_STRAPI_CMS_URL}${product.attributes.image.data.attributes.url}`} />
             <h5>{product.attributes.Title}</h5>
             <br />
             <ProductDescription>{product.attributes.Description}</ProductDescription>
@@ -84,7 +93,14 @@ export const ShopItemPreview = ({ product }: { product: ProductsProps | null }) 
                 <SizeButton isSelected={size === 'XL'} value={'XL'} onClick={handleSizeSelect}>XL</SizeButton>
             </div>
             <ProductPrice>{product.attributes.Price}</ProductPrice>
-            <OrderButton onClick={handleOrder}>Поръчай сега</OrderButton>
+            <OrderButton onClick={
+                () => handleOrder(
+                    `${import.meta.env.VITE_STRAPI_CMS_URL}${product.attributes.image.data.attributes.url}`,
+                    `${product.attributes.Title}`,
+                    `${product.attributes.Price}`,
+                    `${size}`
+                )
+            }>Поръчай сега</OrderButton>
         </div>
     )
 }

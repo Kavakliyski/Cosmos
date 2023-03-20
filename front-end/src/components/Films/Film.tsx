@@ -93,7 +93,7 @@ export const FilmRight = ({ title, director, cast, genre, year, movie_image }: I
 
             <div className='FilmImage'>
                 <HoverFigure>
-                    <img src={`http://localhost:1337${movie_image}`} />
+                    <img src={`${import.meta.env.VITE_STRAPI_CMS_URL}${movie_image}`} />
                     <figcaption>
                         <StyledH4>{title}</StyledH4>
                         <div>
@@ -119,7 +119,7 @@ export const FilmLeft = ({ title, director, cast, genre, year, movie_image }: IF
 
             <div className='FilmImage'>
                 <HoverFigure>
-                    <img src={movie_image} />
+                    <img src={`${import.meta.env.VITE_STRAPI_CMS_URL}${movie_image}`} />
                     <figcaption>
                         <StyledH4>{title}</StyledH4>
                         <div>

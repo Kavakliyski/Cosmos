@@ -23,7 +23,7 @@ export const ShopItems = ({ products, onImageClick, arrow }: ShopItemsProps) => 
                     <div key={product.id} className="ProductContainer">
                         <div className="ProductImage">
                             <img
-                                src={`http://localhost:1337${product.attributes.image.data.attributes.url}`}
+                                src={`${import.meta.env.VITE_STRAPI_CMS_URL}${product.attributes.image.data.attributes.url}`}
                                 onClick={() => onImageClick(product)}
                             />
 
