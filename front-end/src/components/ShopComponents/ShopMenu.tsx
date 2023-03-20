@@ -6,7 +6,7 @@ import { ShopItems } from "./ShopItems";
 import { ShopItemPreview } from "./ShopItemPreview";
 
 // IF
-import { Product, ProductsProps } from "../../interfaces/IProducts";
+import { ProductOrder, ProductsProps } from "../../interfaces/IProducts";
 
 // react
 import { useEffect, useState } from "react";
@@ -15,7 +15,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 
-export const ShopMenu = () => {
+export const ShopMenu = ({ setOrderedProduct }: { setOrderedProduct: (product: ProductOrder) => void }) => {
 
     const [data, setData] = useState<any>(null);
     const [error, setError] = useState<any | null>(null);
@@ -24,9 +24,9 @@ export const ShopMenu = () => {
     const [selectedImage, setSelectedImage] = useState<ProductsProps | null>(data && data[0]);
     const [selectedItemId, setSelectedItemId] = useState<string | null>(data && data[3].id);
 
-    const [orderProduct, setOrderProduct] = useState<{ image: string, title: string, price: string, size: string } | null>(null);
+    // const [orderProduct, setOrderProduct] = useState<{ image: string, title: string, price: string, size: string } | null>(null);
 
-    
+
     useEffect(() => {
 
         setLoading(true);
@@ -46,8 +46,6 @@ export const ShopMenu = () => {
     }, [])
 
 
-    console.log(orderProduct)
-
     const handleImageClick = (data: ProductsProps) => {
 
         setSelectedImage(data);
@@ -61,10 +59,8 @@ export const ShopMenu = () => {
     return (
         <>
             <div className="ShopContainer">
-
-
                 <ShopItems products={data} onImageClick={handleImageClick} arrow={selectedItemId} />
-                <ShopItemPreview product={selectedImage} addOrder={setOrderProduct} />
+                <ShopItemPreview product={selectedImage} setOrderedProduct={setOrderedProduct} />
             </div>
         </>
     )

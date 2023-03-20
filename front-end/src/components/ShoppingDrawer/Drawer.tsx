@@ -1,5 +1,10 @@
+// react
 import React from "react";
+
+// styles
 import styled from "styled-components";
+import '../../styles/ShoppingDrawer/Drawer.scss'
+
 
 
 const DrawerContainer = styled.div`
@@ -33,21 +38,41 @@ interface DrawerProps {
     orderProduct?: {
         image: string,
         title: string,
-        price: string,
+        price: number,
         size: string
     } | null;
+    orderedProduct: any;
 }
 
-const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose, orderProduct }) => {
+const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose, orderedProduct }) => {
+
+    console.log('DRAWER', orderedProduct);
+    console.log(orderedProduct.orderedProduct && orderedProduct.orderedProduct.title);
+
 
     return (
         <DrawerContainer
             style={{ transform: isOpen ? "translateX(0)" : "translateX(100%)" }}
         >
-            {/* TODO: Add the contents of the drawer here */}
-            <CloseDrawerButton>
-                <button onClick={onClose}>X</button>
-            </CloseDrawerButton>
+            <div className="DrawerWrapper">
+
+                <CloseDrawerButton>
+                    <button onClick={onClose}>X</button>
+                </CloseDrawerButton>
+
+
+                {
+                    orderedProduct.orderedProduct &&
+                    <div key={orderedProduct.title}>
+                        <img src={orderedProduct.orderedProduct.image} />
+                        <div>{orderedProduct.orderedProduct.title}</div>
+                        <div>{orderedProduct.orderedProduct.price}</div>
+                        <div>{orderedProduct.orderedProduct.size}</div>
+                    </div>
+
+                }
+            </div>
+
 
         </DrawerContainer>
     );

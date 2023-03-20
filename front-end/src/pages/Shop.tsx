@@ -1,13 +1,15 @@
 import { ShopMenu } from "../components/ShopComponents/ShopMenu"
 
+import { ProductOrder, ShopProps } from "../interfaces/IProducts"
 
-function Shop() {
+
+function Shop({ setOrderedProducts }: ShopProps) {
 
 
     return (
         <div>
             <h1>Магазин</h1>
-            <ShopMenu />
+            <ShopMenu setOrderedProducts={setOrderedProducts} />
         </div>
     )
 }

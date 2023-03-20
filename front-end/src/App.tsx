@@ -1,9 +1,12 @@
+// react
+import { useState } from 'react';
+
 // styles
 import './styles/App.scss';
 
 // components
 import Footer from './components/PageLayout/Footer';
-import Header from './components/PageLayout/Header';
+import { HeaderNew } from './components/PageLayout/HeaderNew';
 
 // router
 import { Routes, Route } from "react-router-dom";
@@ -16,28 +19,30 @@ import About from './pages/About';
 import Terms from './pages/Terms';
 import Faq from './pages/Faq';
 import Careers from './pages/Careers';
-import { HeaderNew } from './components/PageLayout/HeaderNew';
 import FilmDetails from './pages/FilmDetails';
+
+// interfaces
+import { ProductOrder } from './interfaces/IProducts';
 
 
 function App() {
 
+    const [orderedProducts, setOrderedProducts] = useState<ProductOrder[] | null>(null);
 
     return (
         <div className="App">
 
-            <HeaderNew />
-            {/* <Header /> */}
+            <HeaderNew orderedProducts={orderedProducts}/>
 
             <Routes>
                 <Route index element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/films" element={<Films />} />
                 <Route path="/films/:id" element={<FilmDetails />} />
-                <Route path="/shop" element={<Shop />} />
-                <Route path="/shop" element={<Terms />} />
-                <Route path="/shop" element={<Faq />} />
-                <Route path="/shop" element={<Careers />} />
+                <Route path="/shop" element={<Shop setOrderedProducts={setOrderedProducts}/>} />
+                <Route path="/" element={<Terms />} />
+                <Route path="/" element={<Faq />} />
+                <Route path="/" element={<Careers />} />
                 <Route path="*" element={<h1>Not Found</h1>} />
             </Routes>
 

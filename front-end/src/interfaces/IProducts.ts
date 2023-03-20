@@ -27,4 +27,15 @@ export interface ProductOrder {
     title?: string;
     price?: number;
     size?: string;
+    orderedProduct?: any;
+    setOrderedProduct?: (product: ProductOrder) => void;
+}
+
+export interface ShopProps {
+    setOrderedProducts: (products: ProductOrder[]) => void;
+}
+
+export interface ShopItemPreviewProps {
+    product: ProductsProps | null;
+    setOrderedProducts: (products: ProductOrder[]) => void;
 }

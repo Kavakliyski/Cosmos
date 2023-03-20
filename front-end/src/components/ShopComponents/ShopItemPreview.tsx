@@ -6,7 +6,7 @@ import "../../styles/Shop_styles/ShopItemPreview.scss";
 import styled from "styled-components";
 
 // IF
-import { ProductOrder, ProductsProps } from "../../interfaces/IProducts";
+import { ProductOrder, ProductsProps, ShopItemPreviewProps } from "../../interfaces/IProducts";
 
 
 const ProductDescription = styled.p`
@@ -52,7 +52,7 @@ const OrderButton = styled.button`
 `
 
 
-export const ShopItemPreview = ({ product, addOrder }: { product: ProductsProps | null, addOrder: ((product: ProductOrder) => void) | any}) => {
+export const ShopItemPreview = ({ product, setOrderedProducts }: ShopItemPreviewProps) => {
 
     const [size, setSize] = useState<string | null>(null);
 
@@ -67,8 +67,11 @@ export const ShopItemPreview = ({ product, addOrder }: { product: ProductsProps 
             return false;
         }
 
-        addOrder({ image, title, price, size });
+        console.log('handle order', image, title, price, size)
+
+        setOrderedProducts(prevProducts => [...prevProducts, { image, title, price, size }]);
     };
+
 
     if (!product) {
         return null;
