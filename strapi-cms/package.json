@@ -18,7 +18,7 @@
     "better-sqlite3": "8.0.1",
     "strapi-plugin-vercel-deploy": "^1.4.0"
   },
-  "author": {
+  "author": { 
     "name": "A Strapi developer"
   },
   "strapi": {

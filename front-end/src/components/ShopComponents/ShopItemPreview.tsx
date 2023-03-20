@@ -6,7 +6,7 @@ import "../../styles/Shop_styles/ShopItemPreview.scss";
 import styled from "styled-components";
 
 // IF
-import { ProductsProps } from "../../interfaces/IProducts";
+import { ProductOrder, ProductsProps } from "../../interfaces/IProducts";
 
 
 const ProductDescription = styled.p`
@@ -52,27 +52,23 @@ const OrderButton = styled.button`
 `
 
 
-export const ShopItemPreview = ({ product }: { product: ProductsProps | null }) => {
+export const ShopItemPreview = ({ product, addOrder }: { product: ProductsProps | null, addOrder: ((product: ProductOrder) => void) | any}) => {
 
     const [size, setSize] = useState<string | null>(null);
-    const [orderProduct, setOrderProduct] = useState<{ image: string, title: string, price: string, size: string } | null>(null);
 
     const handleSizeSelect = (e: React.MouseEvent<HTMLButtonElement>) => {
         setSize((e.target as HTMLButtonElement).value);
     }
 
-    const handleOrder = (image: string, title: string, price: string, size: string) => {
+    const handleOrder = (image: string, title: string, price: number, size: string) => {
 
         if (size === 'null') {
             alert("Изберете размер")
             return false;
         }
 
-        const newOrderProduct = { image, title, price, size };
-        setOrderProduct(newOrderProduct);
+        addOrder({ image, title, price, size });
     };
-
-    console.log(orderProduct)
 
     if (!product) {
         return null;
@@ -92,12 +88,12 @@ export const ShopItemPreview = ({ product }: { product: ProductsProps | null }) 
                 <SizeButton isSelected={size === 'L'} value={'L'} onClick={handleSizeSelect}>L</SizeButton>
                 <SizeButton isSelected={size === 'XL'} value={'XL'} onClick={handleSizeSelect}>XL</SizeButton>
             </div>
-            <ProductPrice>{product.attributes.Price}</ProductPrice>
+            <ProductPrice>{product.attributes.Price} лева</ProductPrice>
             <OrderButton onClick={
                 () => handleOrder(
                     `${import.meta.env.VITE_STRAPI_CMS_URL}${product.attributes.image.data.attributes.url}`,
                     `${product.attributes.Title}`,
-                    `${product.attributes.Price}`,
+                    product.attributes.Price,
                     `${size}`
                 )
             }>Поръчай сега</OrderButton>

@@ -24,6 +24,9 @@ export const ShopMenu = () => {
     const [selectedImage, setSelectedImage] = useState<ProductsProps | null>(data && data[0]);
     const [selectedItemId, setSelectedItemId] = useState<string | null>(data && data[3].id);
 
+    const [orderProduct, setOrderProduct] = useState<{ image: string, title: string, price: string, size: string } | null>(null);
+
+    
     useEffect(() => {
 
         setLoading(true);
@@ -43,7 +46,7 @@ export const ShopMenu = () => {
     }, [])
 
 
-
+    console.log(orderProduct)
 
     const handleImageClick = (data: ProductsProps) => {
 
@@ -61,7 +64,7 @@ export const ShopMenu = () => {
 
 
                 <ShopItems products={data} onImageClick={handleImageClick} arrow={selectedItemId} />
-                <ShopItemPreview product={selectedImage} />
+                <ShopItemPreview product={selectedImage} addOrder={setOrderProduct} />
             </div>
         </>
     )

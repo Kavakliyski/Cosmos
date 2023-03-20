@@ -1,9 +1,9 @@
 export interface ProductsProps {
     id: string;
     src: string;
-    alt: string;
+    alt?: string;
     description?: string;
-    price?: string;
+    price?: number;
     data?: object;
     attributes?: any;
 }
@@ -20,4 +20,11 @@ export interface Product {
     products: any;
     product: any;
     data: any
+}
+
+export interface ProductOrder {
+    image?: string;
+    title?: string;
+    price?: number;
+    size?: string;
 }
