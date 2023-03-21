@@ -22,20 +22,30 @@ export interface Product {
     data: any
 }
 
-export interface ProductOrder {
-    image?: string;
-    title?: string;
-    price?: number;
-    size?: string;
-    orderedProduct?: any;
-    setOrderedProduct?: (product: ProductOrder) => void;
+export interface Product {
+    image: string;
+    title: string;
+    price: number;
+    size: string;
+}
+
+export interface ShoppingCartProps {
+    orderedProduct?: Product[];
+    setOrderedProduct?: (products: Product[]) => void;
 }
 
 export interface ShopProps {
-    setOrderedProducts: (products: ProductOrder[]) => void;
+    setOrderedProducts: any;
 }
 
 export interface ShopItemPreviewProps {
-    product: ProductsProps | null;
-    setOrderedProducts: (products: ProductOrder[]) => void;
+    product: any;
+    setOrderedProducts: (updateFunction: (prevOrderedProducts: OrderedProduct[]) => OrderedProduct[]) => void;
+}
+
+export interface OrderedProduct {
+    image: string;
+    title: string;
+    price: number;
+    size: string;
 }

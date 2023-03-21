@@ -41,13 +41,13 @@ interface DrawerProps {
         price: number,
         size: string
     } | null;
-    orderedProduct: any;
+    orderedProducts: any;
 }
 
-const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose, orderedProduct }) => {
+const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose, orderedProducts }) => {
 
-    console.log('DRAWER', orderedProduct);
-    console.log(orderedProduct.orderedProduct && orderedProduct.orderedProduct.title);
+    console.log('DRAWER', orderedProducts);
+    // console.log(orderedProducts.orderedProduct[0] && orderedProducts.orderedProduct[2].title);
 
 
     return (
@@ -60,20 +60,21 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose, orderedProduct }) => {
                     <button onClick={onClose}>X</button>
                 </CloseDrawerButton>
 
-
                 {
-                    orderedProduct.orderedProduct &&
-                    <div key={orderedProduct.title}>
-                        <img src={orderedProduct.orderedProduct.image} />
-                        <div>{orderedProduct.orderedProduct.title}</div>
-                        <div>{orderedProduct.orderedProduct.price}</div>
-                        <div>{orderedProduct.orderedProduct.size}</div>
-                    </div>
+                    orderedProducts.orderedProduct.length ?
+                        orderedProducts.orderedProduct.map((product: any) => {
+                            return (
 
+                                <div key={product.title}>
+                                    <p>{product.title}</p>
+                                </div>
+                            )
+
+                        })
+                        :
+                        <h2>Все още няма избрани продукти</h2>
                 }
             </div>
-
-
         </DrawerContainer>
     );
 };

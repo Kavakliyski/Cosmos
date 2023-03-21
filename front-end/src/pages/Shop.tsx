@@ -1,6 +1,6 @@
 import { ShopMenu } from "../components/ShopComponents/ShopMenu"
 
-import { ProductOrder, ShopProps } from "../interfaces/IProducts"
+import { ShopProps } from "../interfaces/IProducts"
 
 
 function Shop({ setOrderedProducts }: ShopProps) {

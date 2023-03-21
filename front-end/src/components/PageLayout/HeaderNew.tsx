@@ -18,13 +18,13 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom'
 
 // interface
-import { ProductOrder } from '../../interfaces/IProducts';
+// import { ProductOrder } from '../../interfaces/IProducts';
 
 
 const CartSVG = styled.img`width: 2.5em;`
 
 
-export const HeaderNew = (orderedProduct: ProductOrder) => {
+export const HeaderNew = (orderedProduct: any) => {
 
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
@@ -61,7 +61,7 @@ export const HeaderNew = (orderedProduct: ProductOrder) => {
                 </li>
             </ul>
 
-            <Drawer isOpen={isDrawerOpen} onClose={handleCloseDrawer} orderedProduct={orderedProduct}/>
+            <Drawer isOpen={isDrawerOpen} onClose={handleCloseDrawer} orderedProducts={orderedProduct}/>
 
         </nav>
     )

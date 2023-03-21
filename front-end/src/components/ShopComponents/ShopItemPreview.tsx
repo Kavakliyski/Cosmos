@@ -6,7 +6,7 @@ import "../../styles/Shop_styles/ShopItemPreview.scss";
 import styled from "styled-components";
 
 // IF
-import { ProductOrder, ProductsProps, ShopItemPreviewProps } from "../../interfaces/IProducts";
+import { OrderedProduct, Product, ProductsProps, ShopItemPreviewProps } from "../../interfaces/IProducts";
 
 
 const ProductDescription = styled.p`
@@ -69,7 +69,10 @@ export const ShopItemPreview = ({ product, setOrderedProducts }: ShopItemPreview
 
         console.log('handle order', image, title, price, size)
 
-        setOrderedProducts(prevProducts => [...prevProducts, { image, title, price, size }]);
+        setOrderedProducts((prevOrderedProducts: OrderedProduct[]) => [
+            ...prevOrderedProducts,
+            { image, title, price, size },
+        ]);
     };
 
 

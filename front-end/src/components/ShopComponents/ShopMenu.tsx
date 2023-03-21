@@ -6,7 +6,7 @@ import { ShopItems } from "./ShopItems";
 import { ShopItemPreview } from "./ShopItemPreview";
 
 // IF
-import { ProductOrder, ProductsProps } from "../../interfaces/IProducts";
+import { OrderedProduct, Product, ProductsProps, ShopProps } from "../../interfaces/IProducts";
 
 // react
 import { useEffect, useState } from "react";
@@ -15,7 +15,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 
-export const ShopMenu = ({ setOrderedProduct }: { setOrderedProduct: (product: ProductOrder) => void }) => {
+export const ShopMenu = ({ setOrderedProducts }: { setOrderedProducts: (updateFunction: (prevOrderedProducts: OrderedProduct[]) => OrderedProduct[]) => void }) => {
 
     const [data, setData] = useState<any>(null);
     const [error, setError] = useState<any | null>(null);
@@ -60,7 +60,7 @@ export const ShopMenu = ({ setOrderedProduct }: { setOrderedProduct: (product: P
         <>
             <div className="ShopContainer">
                 <ShopItems products={data} onImageClick={handleImageClick} arrow={selectedItemId} />
-                <ShopItemPreview product={selectedImage} setOrderedProduct={setOrderedProduct} />
+                <ShopItemPreview product={selectedImage} setOrderedProducts={setOrderedProducts} />
             </div>
         </>
     )

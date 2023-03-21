@@ -22,24 +22,24 @@ import Careers from './pages/Careers';
 import FilmDetails from './pages/FilmDetails';
 
 // interfaces
-import { ProductOrder } from './interfaces/IProducts';
+import { Product } from './interfaces/IProducts';
 
 
 function App() {
 
-    const [orderedProducts, setOrderedProducts] = useState<ProductOrder[] | null>(null);
+    const [orderedProducts, setOrderedProducts] = useState<Product[]>([]);
 
     return (
         <div className="App">
 
-            <HeaderNew orderedProducts={orderedProducts}/>
+            <HeaderNew orderedProduct={orderedProducts} />
 
             <Routes>
                 <Route index element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/films" element={<Films />} />
                 <Route path="/films/:id" element={<FilmDetails />} />
-                <Route path="/shop" element={<Shop setOrderedProducts={setOrderedProducts}/>} />
+                <Route path="/shop" element={<Shop setOrderedProducts={setOrderedProducts} />} />
                 <Route path="/" element={<Terms />} />
                 <Route path="/" element={<Faq />} />
                 <Route path="/" element={<Careers />} />
