@@ -37,7 +37,7 @@ export const FilmsList = () => {
 
 
     if (loading) return <h2>Loading..</h2>
-    if (error) return <h2>Error.. <br /> {error}</h2>
+    if (error) return <h2>Error.. <br /> {error.message}</h2>
 
 
     return (

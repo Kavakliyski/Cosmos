@@ -54,7 +54,7 @@ export const ShopMenu = ({ setOrderedProducts }: { setOrderedProducts: (updateFu
 
 
     if (loading) return <h2>Loading..</h2>
-    if (error) return <h2>Error.. <br /> {error}</h2>
+    if (error) return <h2>Error <br />{error.message}</h2>
 
     return (
         <>
