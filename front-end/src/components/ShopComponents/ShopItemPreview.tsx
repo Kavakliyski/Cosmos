@@ -69,10 +69,19 @@ export const ShopItemPreview = ({ product, setOrderedProducts }: ShopItemPreview
 
         console.log('handle order', image, title, price, size)
 
-        setOrderedProducts((prevOrderedProducts: OrderedProduct[]) => [
-            ...prevOrderedProducts,
-            { image, title, price, size },
-        ]);
+        setOrderedProducts((prevOrderedProducts: OrderedProduct[]) => {
+            const index = prevOrderedProducts.findIndex((p) => p.title === title && p.size === size);
+            if (index !== -1) {
+                const newOrderedProducts = [...prevOrderedProducts];
+                newOrderedProducts[index].count += 1;
+                return newOrderedProducts;
+            } else {
+                return [
+                    ...prevOrderedProducts,
+                    { image, title, price, size, count: 1 },
+                ];
+            }
+        });
     };
 
 

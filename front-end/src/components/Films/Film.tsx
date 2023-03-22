@@ -57,20 +57,31 @@ const HoverFigure = styled.figure`
             color: #e4e4e4;
         }
     }  
+
+
+    @media (max-width: 768px) {
+        img {
+            width: 100%;
+        }
+
+        figcaption {
+            display: none;
+        }
+    }
 `
 
 const StyledH4 = styled.h4`
     text-transform: uppercase;
     font-weight: bold;
     font-size: 70px;
-    color: #e4e4e4;
+    color: #e4e4e4 !important;
 
 `
 
 const StyledPar = styled.p`
     font-size: 26px;
     padding: 0px;
-    color: #e4e4e4;
+    color: #e4e4e4 !important;
 
 `
 

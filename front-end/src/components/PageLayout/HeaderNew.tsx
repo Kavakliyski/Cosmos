@@ -29,12 +29,12 @@ export const HeaderNew = (orderedProduct: any) => {
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
     const handleCartClick = () => {
-        console.log('handleCartClick');
+
         setIsDrawerOpen(!isDrawerOpen);
     };
 
     const handleCloseDrawer = () => {
-        console.log('handleCloseDrawer');
+
         setIsDrawerOpen(false);
     };
 

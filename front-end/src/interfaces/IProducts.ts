@@ -48,4 +48,5 @@ export interface OrderedProduct {
     title: string;
     price: number;
     size: string;
+    count: number;
 }

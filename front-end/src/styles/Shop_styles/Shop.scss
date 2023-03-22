@@ -2,4 +2,9 @@
     justify-content: center;
     display: flex;
     border-bottom: 3px solid #1d0623;
+
+
+    @media (max-width: 768px){
+        display: block;
+    }
 }

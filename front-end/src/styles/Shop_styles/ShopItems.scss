@@ -31,4 +31,13 @@
         }
     }
 
+    @media (max-width: 768px) {
+        .ProductImage {
+
+            img {
+                width: 100% !important;
+                height: auto !important;
+            }
+        }
+    }
 }

@@ -104,14 +104,13 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose, orderedProducts }) => 
 
         // Calculate the total price of all ordered products
         const priceSum = orderedProducts.orderedProduct.reduce(
-            (sum: any, product: any) => sum + product.price,
+            (sum: any, product: any) => sum + product.price * product.count,
             0
         );
         setTotalPrice(priceSum);
 
     }, [orderedProducts]);
 
-    console.log('DRAWER', products);
 
     return (
         <DrawerContainer
@@ -143,7 +142,7 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose, orderedProducts }) => 
                                                 </div>
                                                 <div className="ItmesContainer">
                                                     <ItemsButton>+</ItemsButton>
-                                                    <p>1</p>
+                                                    <p>{product.count}</p>
                                                     <ItemsButton>-</ItemsButton>
                                                 </div>
                                             </div>
@@ -151,7 +150,7 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose, orderedProducts }) => 
                                     }
                                 )}
                                 <div className="TotalPrice">
-                                    Обща цена: {totalPrice} лева
+                                    Обща стойност: {totalPrice} лева
                                     <p><button>Завърши поръчка</button></p>
                                 </div>
                             </>

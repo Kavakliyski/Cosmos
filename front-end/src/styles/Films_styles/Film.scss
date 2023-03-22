@@ -1,9 +1,8 @@
 .FilmDivWrapper {
 
     padding-bottom: 100px;
-    display: grid;
+    display: flex;
     align-items: center;
-    grid-template-columns: 1fr 2fr;
 
     .FilmTextContainer {
         display: flex;
@@ -21,7 +20,7 @@
             h3 {
                 direction: rtl;
                 transform: rotate(-90deg);
-                font-size: 2vw !important;
+                font-size: 3rem !important;
                 // height: 300px;
                 width: 250px;
             }
@@ -34,8 +33,7 @@
             h3 {
                 direction: rtl;
                 transform: rotate(90deg);
-                font-size: 2vw !important;
-                // height: 300px;
+                font-size: 3rem !important;
                 width: 250px;
             }
         }
@@ -54,6 +52,43 @@
     .FilmImage {
         margin-right: 20px;
         justify-self: end;
+    }
 
+
+    @media (max-width: 768px) {
+        display: block;
+
+        .FilmTextContainer {
+            display: block;
+        }
+
+        .FilmTextContainerTitleRight {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+
+            h3 {
+                transform: rotate(0deg) !important;
+                width: 100% !important;
+                margin: 0px;
+            }
+        }
+
+        .FilmTextContainerTitleLeft {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+
+            h3 {
+                transform: rotate(0deg) !important;
+                width: 100% !important;
+                margin: 0px;
+            }
+        }
+
+        .FilmImage {
+            margin: 0px;
+            justify-self: end;
+        }
     }
 }
