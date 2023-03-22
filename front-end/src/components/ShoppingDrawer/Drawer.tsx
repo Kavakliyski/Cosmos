@@ -1,17 +1,19 @@
 // react
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 // styles
 import styled from "styled-components";
 import '../../styles/ShoppingDrawer/Drawer.scss'
 
+// svg
+import CloseDrawerSVG from "../../assets/close_drawer.svg"
 
 
 const DrawerContainer = styled.div`
     position: fixed;
     top: 0;
     right: 0;
-    width: 35%;
+    width: auto;
     height: 100%;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -21,15 +23,26 @@ const DrawerContainer = styled.div`
     z-index: 6;
 `
 
-const CloseDrawerButton = styled.div`
-    float: right;
-    padding-right: 50px;
-    padding-top: 50px;
+const CloseDrawer = styled.button`
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 
-    button{
-        width: 50px;
-        height: 50px;
+    padding-left: 30px;
+    opacity: 0.6;
+
+    img {
+        width: 5rem;
     }
+
+    p {
+        font-style: italic !important;
+    }
+
+
 `
 
 interface DrawerProps {
@@ -44,11 +57,16 @@ interface DrawerProps {
     orderedProducts: any;
 }
 
+
 const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose, orderedProducts }) => {
 
-    console.log('DRAWER', orderedProducts);
-    // console.log(orderedProducts.orderedProduct[0] && orderedProducts.orderedProduct[2].title);
+    const [products, setProducts] = useState(orderedProducts.orderedProduct);
 
+    useEffect(() => {
+        setProducts(orderedProducts.orderedProduct);
+    }, [orderedProducts]);
+
+    console.log('DRAWER', products);
 
     return (
         <DrawerContainer
@@ -56,13 +74,14 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose, orderedProducts }) => 
         >
             <div className="DrawerWrapper">
 
-                <CloseDrawerButton>
-                    <button onClick={onClose}>X</button>
-                </CloseDrawerButton>
+                <CloseDrawer onClick={onClose}>
+                    <img src={CloseDrawerSVG} />
+                    <p>Затвори</p>
+                </CloseDrawer>
 
                 {
-                    orderedProducts.orderedProduct.length ?
-                        orderedProducts.orderedProduct.map((product: any) => {
+                    products.length ?
+                        products.map((product: any) => {
                             return (
 
                                 <div key={product.title}>
