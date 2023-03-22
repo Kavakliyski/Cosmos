@@ -45,6 +45,41 @@ const CloseDrawer = styled.button`
 
 `
 
+const ItemsButton = styled.button`
+    border: none;
+    background-color: transparent;
+    font-size: 34px;
+    cursor: pointer;
+
+    align-items: center;
+
+    width: 68px;
+    height: 68px;
+
+    border-radius: 10px;
+
+    &:hover {
+        background-color: #1d062324;
+    }
+
+    &:active {
+        animation-name: wave;
+        animation-duration: 0.8s;
+    }
+    
+    @keyframes wave {
+        from {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        to {
+            transform: scale(1.5);
+            opacity: 0.7;
+        }
+    }
+`
+
 interface DrawerProps {
     isOpen: boolean;
     onClose: () => void;
@@ -61,9 +96,19 @@ interface DrawerProps {
 const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose, orderedProducts }) => {
 
     const [products, setProducts] = useState(orderedProducts.orderedProduct);
+    const [totalPrice, setTotalPrice] = useState(0);
+
 
     useEffect(() => {
         setProducts(orderedProducts.orderedProduct);
+
+        // Calculate the total price of all ordered products
+        const priceSum = orderedProducts.orderedProduct.reduce(
+            (sum: any, product: any) => sum + product.price,
+            0
+        );
+        setTotalPrice(priceSum);
+
     }, [orderedProducts]);
 
     console.log('DRAWER', products);
@@ -79,20 +124,42 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose, orderedProducts }) => 
                     <p>Затвори</p>
                 </CloseDrawer>
 
-                {
-                    products.length ?
-                        products.map((product: any) => {
-                            return (
+                <div className="ProductsContainer">
+                    {
+                        products.length ? (
 
-                                <div key={product.title}>
-                                    <p>{product.title}</p>
+                            <>
+                                {products.map(
+                                    (product: any) => {
+                                        return (
+                                            <div
+                                                className="ProductDrawer"
+                                                key={product.title}>
+                                                <img src={product.image} />
+                                                <div className="TextContainer">
+                                                    <p>{product.title}</p>
+                                                    <p>{product.size}</p>
+                                                    <p>{product.price} лева</p>
+                                                </div>
+                                                <div className="ItmesContainer">
+                                                    <ItemsButton>+</ItemsButton>
+                                                    <p>1</p>
+                                                    <ItemsButton>-</ItemsButton>
+                                                </div>
+                                            </div>
+                                        )
+                                    }
+                                )}
+                                <div className="TotalPrice">
+                                    Обща цена: {totalPrice} лева
+                                    <p><button>Завърши поръчка</button></p>
                                 </div>
-                            )
-
-                        })
-                        :
-                        <h2>Все още няма избрани продукти</h2>
-                }
+                            </>
+                        ) : (
+                            <h2>Все още няма избрани продукти</h2>
+                        )
+                    }
+                </div>
             </div>
         </DrawerContainer>
     );

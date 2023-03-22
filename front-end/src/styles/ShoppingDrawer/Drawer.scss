@@ -1,8 +1,76 @@
-
-.DrawerWrapper{
+.DrawerWrapper {
     color: #161616 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 
-    img{
+    img {
         width: 10vw;
+    }
+
+    padding: 0px 20px 0px 20px;
+
+
+    .ProductsContainer {
+        flex: 1;
+        overflow-y: auto;
+        padding-top: 20px;
+
+        /* Customize the scrollbar */
+        ::-webkit-scrollbar {
+            width: 1px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: red;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: red;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: red;
+        }
+
+        .ProductDrawer {
+            padding: 10px 10px 40px 10px;
+            display: flex;
+
+            border-top: 1px solid #161616;
+
+            img {
+                width: 350px;
+                height: auto;
+            }
+
+            .TextContainer {
+                text-align: center;
+                padding: 10px;
+                width: 100%;
+
+                p {
+                    font-size: 22px;
+                    text-transform: uppercase;
+                }
+            }
+
+            .ItmesContainer {
+                text-align: center;
+                padding: 10px;
+
+            }
+        }
+    }
+
+    .TotalPrice {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        background-color: #fff;
+        padding: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 }
