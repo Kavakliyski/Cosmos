@@ -1,0 +1,476 @@
+[
+    {
+      "id": 1,
+      "attributes": {
+        "Title": "тениска космос",
+        "Description": "Брандирана тениска \"Космос\" от премиум материали.",
+        "createdAt": "2023-03-10T07:53:46.116Z",
+        "updatedAt": "2023-03-20T11:52:49.345Z",
+        "publishedAt": "2023-03-10T07:55:35.149Z",
+        "Price": 50,
+        "image": {
+          "data": {
+            "id": 1,
+            "attributes": {
+              "name": "cloth1.jpg",
+              "alternativeText": null,
+              "caption": null,
+              "width": 5796,
+              "height": 3864,
+              "formats": {
+                "thumbnail": {
+                  "name": "thumbnail_cloth1.jpg",
+                  "hash": "thumbnail_cloth1_5af19561b3",
+                  "ext": ".jpg",
+                  "mime": "image/jpeg",
+                  "path": null,
+                  "width": 234,
+                  "height": 156,
+                  "size": 3.31,
+                  "url": "/uploads/thumbnail_cloth1_5af19561b3.jpg"
+                },
+                "large": {
+                  "name": "large_cloth1.jpg",
+                  "hash": "large_cloth1_5af19561b3",
+                  "ext": ".jpg",
+                  "mime": "image/jpeg",
+                  "path": null,
+                  "width": 1000,
+                  "height": 667,
+                  "size": 41.45,
+                  "url": "/uploads/large_cloth1_5af19561b3.jpg"
+                },
+                "medium": {
+                  "name": "medium_cloth1.jpg",
+                  "hash": "medium_cloth1_5af19561b3",
+                  "ext": ".jpg",
+                  "mime": "image/jpeg",
+                  "path": null,
+                  "width": 750,
+                  "height": 500,
+                  "size": 20.57,
+                  "url": "/uploads/medium_cloth1_5af19561b3.jpg"
+                },
+                "small": {
+                  "name": "small_cloth1.jpg",
+                  "hash": "small_cloth1_5af19561b3",
+                  "ext": ".jpg",
+                  "mime": "image/jpeg",
+                  "path": null,
+                  "width": 500,
+                  "height": 334,
+                  "size": 8.99,
+                  "url": "/uploads/small_cloth1_5af19561b3.jpg"
+                }
+              },
+              "hash": "cloth1_5af19561b3",
+              "ext": ".jpg",
+              "mime": "image/jpeg",
+              "size": 5417.36,
+              "url": "/src/assets/forShop/cloth1.jpg",
+              "previewUrl": null,
+              "provider": "local",
+              "provider_metadata": null,
+              "createdAt": "2023-03-10T07:52:52.521Z",
+              "updatedAt": "2023-03-10T07:53:09.249Z"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 2,
+      "attributes": {
+        "Title": "теникса космос \"бяла\"",
+        "Description": "премиум материал",
+        "createdAt": "2023-03-10T08:31:38.380Z",
+        "updatedAt": "2023-03-20T11:52:44.345Z",
+        "publishedAt": "2023-03-10T08:31:39.263Z",
+        "Price": 50,
+        "image": {
+          "data": {
+            "id": 2,
+            "attributes": {
+              "name": "cloth2.jpg",
+              "alternativeText": null,
+              "caption": null,
+              "width": 5796,
+              "height": 3864,
+              "formats": {
+                "thumbnail": {
+                  "name": "thumbnail_cloth2.jpg",
+                  "hash": "thumbnail_cloth2_cb526a4030",
+                  "ext": ".jpg",
+                  "mime": "image/jpeg",
+                  "path": null,
+                  "width": 234,
+                  "height": 156,
+                  "size": 3.73,
+                  "url": "/uploads/thumbnail_cloth2_cb526a4030.jpg"
+                },
+                "large": {
+                  "name": "large_cloth2.jpg",
+                  "hash": "large_cloth2_cb526a4030",
+                  "ext": ".jpg",
+                  "mime": "image/jpeg",
+                  "path": null,
+                  "width": 1000,
+                  "height": 667,
+                  "size": 39.81,
+                  "url": "/uploads/large_cloth2_cb526a4030.jpg"
+                },
+                "medium": {
+                  "name": "medium_cloth2.jpg",
+                  "hash": "medium_cloth2_cb526a4030",
+                  "ext": ".jpg",
+                  "mime": "image/jpeg",
+                  "path": null,
+                  "width": 750,
+                  "height": 500,
+                  "size": 21.09,
+                  "url": "/uploads/medium_cloth2_cb526a4030.jpg"
+                },
+                "small": {
+                  "name": "small_cloth2.jpg",
+                  "hash": "small_cloth2_cb526a4030",
+                  "ext": ".jpg",
+                  "mime": "image/jpeg",
+                  "path": null,
+                  "width": 500,
+                  "height": 334,
+                  "size": 10.4,
+                  "url": "/uploads/small_cloth2_cb526a4030.jpg"
+                }
+              },
+              "hash": "cloth2_cb526a4030",
+              "ext": ".jpg",
+              "mime": "image/jpeg",
+              "size": 4920.91,
+              "url": "/src/assets/forShop/cloth2.jpg",
+              "previewUrl": null,
+              "provider": "local",
+              "provider_metadata": null,
+              "createdAt": "2023-03-10T08:30:48.595Z",
+              "updatedAt": "2023-03-10T08:30:48.595Z"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 3,
+      "attributes": {
+        "Title": "зимна маска космос",
+        "Description": "Брандирана зимна маска \"КОСМОС\" от премиум материали.",
+        "createdAt": "2023-03-10T14:09:58.847Z",
+        "updatedAt": "2023-03-20T11:52:17.355Z",
+        "publishedAt": "2023-03-10T14:09:59.735Z",
+        "Price": 40,
+        "image": {
+          "data": {
+            "id": 3,
+            "attributes": {
+              "name": "cloth6.jpg",
+              "alternativeText": null,
+              "caption": null,
+              "width": 1024,
+              "height": 600,
+              "formats": {
+                "thumbnail": {
+                  "name": "thumbnail_cloth6.jpg",
+                  "hash": "thumbnail_cloth6_26a99e7db1",
+                  "ext": ".jpg",
+                  "mime": "image/jpeg",
+                  "path": null,
+                  "width": 245,
+                  "height": 144,
+                  "size": 2.26,
+                  "url": "/uploads/thumbnail_cloth6_26a99e7db1.jpg"
+                },
+                "large": {
+                  "name": "large_cloth6.jpg",
+                  "hash": "large_cloth6_26a99e7db1",
+                  "ext": ".jpg",
+                  "mime": "image/jpeg",
+                  "path": null,
+                  "width": 1000,
+                  "height": 586,
+                  "size": 38.01,
+                  "url": "/uploads/large_cloth6_26a99e7db1.jpg"
+                },
+                "small": {
+                  "name": "small_cloth6.jpg",
+                  "hash": "small_cloth6_26a99e7db1",
+                  "ext": ".jpg",
+                  "mime": "image/jpeg",
+                  "path": null,
+                  "width": 500,
+                  "height": 293,
+                  "size": 7.44,
+                  "url": "/uploads/small_cloth6_26a99e7db1.jpg"
+                },
+                "medium": {
+                  "name": "medium_cloth6.jpg",
+                  "hash": "medium_cloth6_26a99e7db1",
+                  "ext": ".jpg",
+                  "mime": "image/jpeg",
+                  "path": null,
+                  "width": 750,
+                  "height": 439,
+                  "size": 19.27,
+                  "url": "/uploads/medium_cloth6_26a99e7db1.jpg"
+                }
+              },
+              "hash": "cloth6_26a99e7db1",
+              "ext": ".jpg",
+              "mime": "image/jpeg",
+              "size": 41,
+              "url": "/src/assets/forShop/cloth3.jpg",
+              "previewUrl": null,
+              "provider": "local",
+              "provider_metadata": null,
+              "createdAt": "2023-03-10T14:09:19.094Z",
+              "updatedAt": "2023-03-10T14:09:19.094Z"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 4,
+      "attributes": {
+        "Title": "каска космос",
+        "Description": "Доста е яка, +85% шанс да не си разбиеш главата.",
+        "createdAt": "2023-03-13T08:25:53.246Z",
+        "updatedAt": "2023-03-20T11:52:37.012Z",
+        "publishedAt": "2023-03-13T08:25:53.857Z",
+        "Price": 880,
+        "image": {
+          "data": {
+            "id": 5,
+            "attributes": {
+              "name": "cloth3.jpg",
+              "alternativeText": null,
+              "caption": null,
+              "width": 1024,
+              "height": 600,
+              "formats": {
+                "thumbnail": {
+                  "name": "thumbnail_cloth3.jpg",
+                  "hash": "thumbnail_cloth3_126c300d14",
+                  "ext": ".jpg",
+                  "mime": "image/jpeg",
+                  "path": null,
+                  "width": 245,
+                  "height": 144,
+                  "size": 2.89,
+                  "url": "/uploads/thumbnail_cloth3_126c300d14.jpg"
+                },
+                "medium": {
+                  "name": "medium_cloth3.jpg",
+                  "hash": "medium_cloth3_126c300d14",
+                  "ext": ".jpg",
+                  "mime": "image/jpeg",
+                  "path": null,
+                  "width": 750,
+                  "height": 439,
+                  "size": 21.26,
+                  "url": "/uploads/medium_cloth3_126c300d14.jpg"
+                },
+                "large": {
+                  "name": "large_cloth3.jpg",
+                  "hash": "large_cloth3_126c300d14",
+                  "ext": ".jpg",
+                  "mime": "image/jpeg",
+                  "path": null,
+                  "width": 1000,
+                  "height": 586,
+                  "size": 40.17,
+                  "url": "/uploads/large_cloth3_126c300d14.jpg"
+                },
+                "small": {
+                  "name": "small_cloth3.jpg",
+                  "hash": "small_cloth3_126c300d14",
+                  "ext": ".jpg",
+                  "mime": "image/jpeg",
+                  "path": null,
+                  "width": 500,
+                  "height": 293,
+                  "size": 8.75,
+                  "url": "/uploads/small_cloth3_126c300d14.jpg"
+                }
+              },
+              "hash": "cloth3_126c300d14",
+              "ext": ".jpg",
+              "mime": "image/jpeg",
+              "size": 43.04,
+              "url": "/src/assets/forShop/cloth4.jpg",
+              "previewUrl": null,
+              "provider": "local",
+              "provider_metadata": null,
+              "createdAt": "2023-03-13T08:24:37.102Z",
+              "updatedAt": "2023-03-13T08:25:03.754Z"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 5,
+      "attributes": {
+        "Title": "яке космос",
+        "Description": "Доста е яко и топло.",
+        "createdAt": "2023-03-13T08:26:23.232Z",
+        "updatedAt": "2023-03-20T11:53:00.386Z",
+        "publishedAt": "2023-03-13T08:26:23.634Z",
+        "Price": 440,
+        "image": {
+          "data": {
+            "id": 6,
+            "attributes": {
+              "name": "cloth4.jpg",
+              "alternativeText": null,
+              "caption": null,
+              "width": 1024,
+              "height": 600,
+              "formats": {
+                "thumbnail": {
+                  "name": "thumbnail_cloth4.jpg",
+                  "hash": "thumbnail_cloth4_a9c15abdeb",
+                  "ext": ".jpg",
+                  "mime": "image/jpeg",
+                  "path": null,
+                  "width": 245,
+                  "height": 144,
+                  "size": 4.32,
+                  "url": "/uploads/thumbnail_cloth4_a9c15abdeb.jpg"
+                },
+                "large": {
+                  "name": "large_cloth4.jpg",
+                  "hash": "large_cloth4_a9c15abdeb",
+                  "ext": ".jpg",
+                  "mime": "image/jpeg",
+                  "path": null,
+                  "width": 1000,
+                  "height": 586,
+                  "size": 49.1,
+                  "url": "/uploads/large_cloth4_a9c15abdeb.jpg"
+                },
+                "medium": {
+                  "name": "medium_cloth4.jpg",
+                  "hash": "medium_cloth4_a9c15abdeb",
+                  "ext": ".jpg",
+                  "mime": "image/jpeg",
+                  "path": null,
+                  "width": 750,
+                  "height": 439,
+                  "size": 27.55,
+                  "url": "/uploads/medium_cloth4_a9c15abdeb.jpg"
+                },
+                "small": {
+                  "name": "small_cloth4.jpg",
+                  "hash": "small_cloth4_a9c15abdeb",
+                  "ext": ".jpg",
+                  "mime": "image/jpeg",
+                  "path": null,
+                  "width": 500,
+                  "height": 293,
+                  "size": 12.51,
+                  "url": "/uploads/small_cloth4_a9c15abdeb.jpg"
+                }
+              },
+              "hash": "cloth4_a9c15abdeb",
+              "ext": ".jpg",
+              "mime": "image/jpeg",
+              "size": 52.2,
+              "url": "/src/assets/forShop/cloth5.jpg",
+              "previewUrl": null,
+              "provider": "local",
+              "provider_metadata": null,
+              "createdAt": "2023-03-13T08:24:37.113Z",
+              "updatedAt": "2023-03-13T08:24:37.113Z"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 6,
+      "attributes": {
+        "Title": "чантичка космос",
+        "Description": "По-добре тази, отколкото друга диагоналка.",
+        "createdAt": "2023-03-13T08:27:22.835Z",
+        "updatedAt": "2023-03-20T11:52:55.907Z",
+        "publishedAt": "2023-03-13T08:27:23.556Z",
+        "Price": 250,
+        "image": {
+          "data": {
+            "id": 4,
+            "attributes": {
+              "name": "cloth5.jpg",
+              "alternativeText": null,
+              "caption": null,
+              "width": 1024,
+              "height": 600,
+              "formats": {
+                "thumbnail": {
+                  "name": "thumbnail_cloth5.jpg",
+                  "hash": "thumbnail_cloth5_f9a070ae15",
+                  "ext": ".jpg",
+                  "mime": "image/jpeg",
+                  "path": null,
+                  "width": 245,
+                  "height": 144,
+                  "size": 2.9,
+                  "url": "/uploads/thumbnail_cloth5_f9a070ae15.jpg"
+                },
+                "large": {
+                  "name": "large_cloth5.jpg",
+                  "hash": "large_cloth5_f9a070ae15",
+                  "ext": ".jpg",
+                  "mime": "image/jpeg",
+                  "path": null,
+                  "width": 1000,
+                  "height": 586,
+                  "size": 41.07,
+                  "url": "/uploads/large_cloth5_f9a070ae15.jpg"
+                },
+                "medium": {
+                  "name": "medium_cloth5.jpg",
+                  "hash": "medium_cloth5_f9a070ae15",
+                  "ext": ".jpg",
+                  "mime": "image/jpeg",
+                  "path": null,
+                  "width": 750,
+                  "height": 439,
+                  "size": 21.69,
+                  "url": "/uploads/medium_cloth5_f9a070ae15.jpg"
+                },
+                "small": {
+                  "name": "small_cloth5.jpg",
+                  "hash": "small_cloth5_f9a070ae15",
+                  "ext": ".jpg",
+                  "mime": "image/jpeg",
+                  "path": null,
+                  "width": 500,
+                  "height": 293,
+                  "size": 8.88,
+                  "url": "/uploads/small_cloth5_f9a070ae15.jpg"
+                }
+              },
+              "hash": "cloth5_f9a070ae15",
+              "ext": ".jpg",
+              "mime": "image/jpeg",
+              "size": 44.15,
+              "url": "/src/assets/forShop/cloth6.jpg",
+              "previewUrl": null,
+              "provider": "local",
+              "provider_metadata": null,
+              "createdAt": "2023-03-13T08:24:37.085Z",
+              "updatedAt": "2023-03-13T08:24:37.085Z"
+            }
+          }
+        }
+      }
+    }
+  ]

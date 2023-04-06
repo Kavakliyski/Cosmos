@@ -26,24 +26,33 @@ export const ShopMenu = ({ setOrderedProducts }: { setOrderedProducts: (updateFu
 
     // const [orderProduct, setOrderProduct] = useState<{ image: string, title: string, price: string, size: string } | null>(null);
 
+    // ======================== strapi deloyment stopped ========================
+    // useEffect(() => {
 
+    //     setLoading(true);
+
+    //     axios.get(`${import.meta.env.VITE_STRAPI_CMS_URL}/api/products?populate=*`)
+    //         .then((response) => {
+    //             setError(null)
+    //             console.log(response.data.data);
+    //             setData(response.data.data);                                                // save the respone into data const
+    //             handleImageClick(response.data.data[0])                                     // set the first object in the array
+    //             setLoading(false);
+    //         })
+    //         .catch(error => {
+    //             setError(error);
+    //             console.log(error);
+    //             setLoading(false);
+    //         });
+    // }, [])
+
+    // ======================== alternative in strapi is stopped ========================
     useEffect(() => {
-
-        setLoading(true);
-
-        axios.get(`${import.meta.env.VITE_STRAPI_CMS_URL}/api/products?populate=*`)
-            .then((response) => {
-                setError(null)
-                setData(response.data.data);                                                // save the respone into data const
-                handleImageClick(response.data.data[0])                                     // set the first object in the array
-                setLoading(false);
-            })
-            .catch(error => {
-                setError(error);
-                console.log(error);
-                setLoading(false);
-            });
-    }, [])
+        fetch("../../../strapi-products-api.json")
+            .then((response) => (response.json()))
+            .then((jsonData) => (handleImageClick(jsonData[0]), setData(jsonData)));
+            setLoading(false);
+    }, []);
 
 
     const handleImageClick = (data: ProductsProps) => {
