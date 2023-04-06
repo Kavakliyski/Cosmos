@@ -13,7 +13,7 @@ const DrawerContainer = styled.div`
     position: fixed;
     top: 0;
     right: 0;
-    width: auto;
+    width: 40rem;
     height: 100%;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -26,12 +26,14 @@ const DrawerContainer = styled.div`
 const CloseDrawer = styled.button`
     display: flex;
     align-items: center;
+    // justify-content: center;
     gap: 15px;
     background-color: transparent;
     border: none;
     cursor: pointer;
 
-    padding-left: 30px;
+    padding-top: 15px;
+
     opacity: 0.6;
 
     img {
@@ -133,7 +135,7 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose, orderedProducts }) => 
                                         return (
                                             <div
                                                 className="ProductDrawer"
-                                                key={product.title}>
+                                                key={`${product.title}${product.size}`}>
                                                 <img src={product.image} />
                                                 <div className="TextContainer">
                                                     <p>{product.title}</p>
