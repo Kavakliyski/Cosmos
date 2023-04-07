@@ -8,6 +8,9 @@ import styled from "styled-components";
 // IF
 import { OrderedProduct, Product, ProductsProps, ShopItemPreviewProps } from "../../interfaces/IProducts";
 
+// unloaded img
+
+
 
 const ProductDescription = styled.p`
     color: #161616;
@@ -56,6 +59,10 @@ export const ShopItemPreview = ({ product, setOrderedProducts }: ShopItemPreview
 
     const [size, setSize] = useState<string | null>(null);
 
+    const [imageLoaded, setImageLoaded] = useState(false);
+
+    console.log('imageLoaded', imageLoaded)
+
     const handleSizeSelect = (e: React.MouseEvent<HTMLButtonElement>) => {
         setSize((e.target as HTMLButtonElement).value);
     }
@@ -93,7 +100,10 @@ export const ShopItemPreview = ({ product, setOrderedProducts }: ShopItemPreview
     return (
 
         <div className="ShopItemPreviewContainer">
-            <img src={`${import.meta.env.VITE_STRAPI_CMS_URL}${product.attributes.image.data.attributes.url}`} />
+            <img
+                onLoad={() => setImageLoaded(true)}
+                src={imageLoaded ? `${import.meta.env.VITE_STRAPI_CMS_URL}${product.attributes.image.data.attributes.url}` : ''}
+            />
             <h5>{product.attributes.Title}</h5>
             <br />
             <ProductDescription>{product.attributes.Description}</ProductDescription>

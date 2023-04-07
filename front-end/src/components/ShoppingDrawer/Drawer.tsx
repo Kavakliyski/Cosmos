@@ -21,6 +21,11 @@ const DrawerContainer = styled.div`
     transform: translateX(100%);
     border-radius: 30px 0px 0px 12px;;
     z-index: 6;
+
+    @media (max-width: 768px) {
+        width: 95%;
+        border-radius: 50px 0px 0px 0px;;
+    }
 `
 
 const CloseDrawer = styled.button`
