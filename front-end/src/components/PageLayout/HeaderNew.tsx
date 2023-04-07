@@ -4,29 +4,28 @@ import { useState } from 'react';
 // logo
 import logo from '../../assets/logo.svg';
 
-// cart svg
-import cart from '../../assets/cart.svg';
-
 // Shopping drawer
 import Drawer from '../ShoppingDrawer/Drawer';
 
 // styles
 import '../../styles/Header_Footer/HeaderNew.scss';
-import styled from 'styled-components';
 
 // react router dom
 import { Link } from 'react-router-dom'
+
+// lottie
+import Lottie from "lottie-react"
+import CartLottie from "../../assets/icons/64-shopping-bag-solid-edited.json"
 
 // interface
 // import { ProductOrder } from '../../interfaces/IProducts';
 
 
-const CartSVG = styled.img`width: 2.5em;`
-
-
 export const HeaderNew = (orderedProduct: any) => {
 
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+    const [bagLoop, setBagLoop] = useState(false);
 
     const handleCartClick = () => {
 
@@ -56,12 +55,19 @@ export const HeaderNew = (orderedProduct: any) => {
                 <Link to="/shop"><li>магазин</li></Link>
                 <li>
                     <div className='ShoppingCart' onClick={handleCartClick} style={{ cursor: 'pointer', textAlign: 'center' }}>
-                        <CartSVG src={cart} onClick={handleCartClick} />
+                        {/* <CartSVG src={cart} onClick={handleCartClick} /> */}
+                        <Lottie
+                            animationData={CartLottie}
+                            style={{ width: '2.5rem'}}
+                            loop={bagLoop}
+                            onMouseEnter={() => setBagLoop(true)}
+                            onMouseLeave={() => setBagLoop(false)}
+                        />
                     </div>
                 </li>
             </ul>
 
-            <Drawer isOpen={isDrawerOpen} onClose={handleCloseDrawer} orderedProducts={orderedProduct}/>
+            <Drawer isOpen={isDrawerOpen} onClose={handleCloseDrawer} orderedProducts={orderedProduct} />
 
         </nav>
     )

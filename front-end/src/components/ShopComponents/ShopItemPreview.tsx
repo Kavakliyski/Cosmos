@@ -9,7 +9,7 @@ import styled from "styled-components";
 import { OrderedProduct, ShopItemPreviewProps } from "../../interfaces/IProducts";
 
 // unloaded img
-import LoadingImg from "../../../public/assets/forShop/lower_quality/loading.jpg"
+import LoadingImg from "../../assets/loading.jpg"
 
 
 const ProductDescription = styled.p`

@@ -9,7 +9,7 @@ import { ShopItemsProps } from "../../interfaces/IProducts";
 import SvgArrow from "../../assets/cosmos_arrow.svg"
 
 // unloaded img
-import LoadingImg from "../../../public/assets/forShop/lower_quality/loading.jpg"
+import LoadingImg from "../../assets/loading.jpg"
 
 // react
 import { useState } from "react";

@@ -5,9 +5,9 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import '../../styles/ShoppingDrawer/Drawer.scss'
 
-// svg
-import CloseDrawerSVG from "../../assets/close_drawer.svg"
-
+// lottie
+import Lottie from "lottie-react"
+import LottieArrow from "../../assets/icons/161-trending-flat-solid-edited.json"
 
 const DrawerContainer = styled.div`
     position: fixed;
@@ -104,7 +104,7 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose, orderedProducts }) => 
 
     const [products, setProducts] = useState(orderedProducts.orderedProduct);
     const [totalPrice, setTotalPrice] = useState(0);
-
+    const [loopArrow, setLoopArrow] = useState(false);
 
     useEffect(() => {
         setProducts(orderedProducts.orderedProduct);
@@ -126,7 +126,13 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose, orderedProducts }) => 
             <div className="DrawerWrapper">
 
                 <CloseDrawer onClick={onClose}>
-                    <img src={CloseDrawerSVG} />
+                    <Lottie
+                        animationData={LottieArrow}
+                        style={{ height: 100, width: 100 }}
+                        loop={loopArrow}
+                        onMouseEnter={() => setLoopArrow(true)}
+                        onMouseLeave={() => setLoopArrow(false)}
+                    />
                     <p>Затвори</p>
                 </CloseDrawer>
 
