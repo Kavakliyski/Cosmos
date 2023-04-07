@@ -85,6 +85,11 @@ nav {
                 margin-left: 0px;
                 gap: 2rem;
                 margin-bottom: 20px;
+
+                li {
+                    display: flex;
+                    justify-content: center;
+                }
             }
         }
     }

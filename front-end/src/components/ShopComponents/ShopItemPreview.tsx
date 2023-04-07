@@ -11,6 +11,9 @@ import { OrderedProduct, ShopItemPreviewProps } from "../../interfaces/IProducts
 // unloaded img
 import LoadingImg from "../../assets/loading.jpg"
 
+// confetti effect
+import Confetti from 'react-dom-confetti';
+
 
 const ProductDescription = styled.p`
     color: #161616;
@@ -61,7 +64,9 @@ export const ShopItemPreview = ({ product, setOrderedProducts }: ShopItemPreview
 
     const [imageLoaded, setImageLoaded] = useState(false);
 
-    console.log('imageLoaded', imageLoaded)
+    const [orderText, setOrderText] = useState("Поръчай сега");
+    const [confettiActive, setConfettiActive] = useState(false);
+
 
     const handleSizeSelect = (e: React.MouseEvent<HTMLButtonElement>) => {
         setSize((e.target as HTMLButtonElement).value);
@@ -89,6 +94,12 @@ export const ShopItemPreview = ({ product, setOrderedProducts }: ShopItemPreview
                 ];
             }
         });
+
+        setOrderText('Добавено в поръчки');
+        setTimeout(() => setOrderText('Поръчай сега'), 1000);
+
+        setConfettiActive(true);
+        setTimeout(() => setConfettiActive(false), 1000);
     };
 
 
@@ -121,7 +132,10 @@ export const ShopItemPreview = ({ product, setOrderedProducts }: ShopItemPreview
                     product.attributes.Price,
                     `${size}`
                 )
-            }>Поръчай сега</OrderButton>
+            }>
+                <Confetti active={confettiActive} config={{ angle: 45, spread: 80, elementCount: 80, startVelocity: 45, decay: 0.999 }} />
+                {orderText}
+            </OrderButton>
         </div>
     )
 }

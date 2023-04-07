@@ -54,8 +54,7 @@ export const HeaderNew = (orderedProduct: any) => {
             <ul className="right-links">
                 <Link to="/shop"><li>магазин</li></Link>
                 <li>
-                    <div className='ShoppingCart' onClick={handleCartClick} style={{ cursor: 'pointer', textAlign: 'center' }}>
-                        {/* <CartSVG src={cart} onClick={handleCartClick} /> */}
+                    <div className='ShoppingCart' onClick={handleCartClick} style={{ cursor: 'pointer'}}>
                         <Lottie
                             animationData={CartLottie}
                             style={{ width: '2.5rem'}}
