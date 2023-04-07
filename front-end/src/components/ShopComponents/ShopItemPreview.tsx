@@ -6,10 +6,10 @@ import "../../styles/Shop_styles/ShopItemPreview.scss";
 import styled from "styled-components";
 
 // IF
-import { OrderedProduct, Product, ProductsProps, ShopItemPreviewProps } from "../../interfaces/IProducts";
+import { OrderedProduct, ShopItemPreviewProps } from "../../interfaces/IProducts";
 
 // unloaded img
-
+import LoadingImg from "../../../public/assets/forShop/lower_quality/loading.jpg"
 
 
 const ProductDescription = styled.p`
@@ -102,7 +102,7 @@ export const ShopItemPreview = ({ product, setOrderedProducts }: ShopItemPreview
         <div className="ShopItemPreviewContainer">
             <img
                 onLoad={() => setImageLoaded(true)}
-                src={imageLoaded ? `${import.meta.env.VITE_STRAPI_CMS_URL}${product.attributes.image.data.attributes.url}` : ''}
+                src={imageLoaded ? `${import.meta.env.VITE_STRAPI_CMS_URL}${product.attributes.image.data.attributes.url}` : LoadingImg}
             />
             <h5>{product.attributes.Title}</h5>
             <br />
