@@ -20,13 +20,10 @@ export interface Product {
     products: any;
     product: any;
     data: any
-}
-
-export interface Product {
-    image: string;
-    title: string;
+    count: number;
     price: number;
     size: string;
+    image: string;
 }
 
 export interface ShoppingCartProps {

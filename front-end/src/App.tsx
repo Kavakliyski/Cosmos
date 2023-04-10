@@ -29,10 +29,11 @@ function App() {
 
     const [orderedProducts, setOrderedProducts] = useState<Product[]>([]);
 
+    
     return (
         <div className="App">
 
-            <HeaderNew orderedProduct={orderedProducts} />
+            <HeaderNew orderedProducts={orderedProducts} setOrderedProducts={setOrderedProducts} />
 
             <Routes>
                 <Route index element={<Home />} />

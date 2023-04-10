@@ -3,11 +3,13 @@ import React, { useState, useEffect } from "react";
 
 // styles
 import styled from "styled-components";
-import '../../styles/ShoppingDrawer/Drawer.scss'
+
+import '../../styles/ShoppingDrawer/Drawer.scss';
 
 // lottie
-import Lottie from "lottie-react"
-import LottieArrow from "../../assets/icons/161-trending-flat-solid-edited.json"
+import Lottie from "lottie-react";
+import LottieArrow from "../../assets/icons/161-trending-flat-solid-edited.json";
+import { Product } from "../../interfaces/IProducts";
 
 const DrawerContainer = styled.div`
     position: fixed;
@@ -96,24 +98,45 @@ interface DrawerProps {
         price: number,
         size: string
     } | null;
-    orderedProducts: any;
+    orderedProducts: Product[];
+    setOrderedProducts: Function;
 }
 
 
-const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose, orderedProducts }) => {
+const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose, orderedProducts, setOrderedProducts }) => {
 
-    const [products, setProducts] = useState(orderedProducts.orderedProduct);
+    // const [products, setProducts] = useState();
     const [totalPrice, setTotalPrice] = useState(0);
     const [loopArrow, setLoopArrow] = useState(false);
 
-    useEffect(() => {
-        setProducts(orderedProducts.orderedProduct);
 
-        // Calculate the total price of all ordered products
-        const priceSum = orderedProducts.orderedProduct.reduce(
-            (sum: any, product: any) => sum + product.price * product.count,
+    const updateProductCount = (productIndex: number, isIncrement: boolean) => {
+
+        const updatedProducts = [...orderedProducts];
+        const product = updatedProducts[productIndex];
+
+
+        if (isIncrement) {
+            product.count += 1;
+        } else {
+            product.count -= 1;
+        }
+
+        if (product.count <= 0) {
+            updatedProducts.splice(productIndex, 1);
+        }
+
+        setOrderedProducts(updatedProducts);
+    };
+
+
+    useEffect(() => {
+
+        const priceSum = orderedProducts.reduce(
+            (total: number, product: Product) => total + product.price * product.count,
             0
         );
+
         setTotalPrice(priceSum);
 
     }, [orderedProducts]);
@@ -138,30 +161,32 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose, orderedProducts }) => 
 
                 <div className="ProductsContainer">
                     {
-                        products.length ? (
+                        orderedProducts.length ? (
 
                             <>
-                                {products.map(
-                                    (product: any) => {
-                                        return (
-                                            <div
-                                                className="ProductDrawer"
-                                                key={`${product.title}${product.size}`}>
-                                                <img src={product.image} />
-                                                <div className="TextContainer">
-                                                    <p>{product.title}</p>
-                                                    <p>{product.size}</p>
-                                                    <p>{product.price} лева</p>
+                                {
+                                    orderedProducts.map(
+                                        (product: Product, index: number) => {
+                                            return (
+                                                <div
+                                                    className="ProductDrawer"
+                                                    key={`${product.title}${product.size}`}>
+                                                    <img src={product.image} />
+                                                    <div className="TextContainer">
+                                                        <p>{product.title}</p>
+                                                        <p>{product.size}</p>
+                                                        <p>{product.price} лева</p>
+                                                    </div>
+                                                    <div className="ItmesContainer">
+                                                        <ItemsButton onClick={() => updateProductCount(index, true)}>+</ItemsButton>
+                                                        <p>{product.count}</p>
+                                                        <ItemsButton onClick={() => updateProductCount(index, false)}>-</ItemsButton>
+                                                    </div>
                                                 </div>
-                                                <div className="ItmesContainer">
-                                                    <ItemsButton>+</ItemsButton>
-                                                    <p>{product.count}</p>
-                                                    <ItemsButton>-</ItemsButton>
-                                                </div>
-                                            </div>
-                                        )
-                                    }
-                                )}
+                                            )
+                                        }
+                                    )
+                                }
                                 <div className="TotalPrice">
                                     Обща стойност: {totalPrice} лева
                                     <p><button>Завърши поръчка</button></p>

@@ -18,10 +18,11 @@ import Lottie from "lottie-react"
 import CartLottie from "../../assets/icons/64-shopping-bag-solid-edited.json"
 
 // interface
-// import { ProductOrder } from '../../interfaces/IProducts';
+import { IHeader } from '../../interfaces/Components';
 
 
-export const HeaderNew = (orderedProduct: any) => {
+export const HeaderNew = ({ orderedProducts, setOrderedProducts }: IHeader) => {
+    
 
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
@@ -54,10 +55,10 @@ export const HeaderNew = (orderedProduct: any) => {
             <ul className="right-links">
                 <Link to="/shop"><li>магазин</li></Link>
                 <li>
-                    <div className='ShoppingCart' onClick={handleCartClick} style={{ cursor: 'pointer'}}>
+                    <div className='ShoppingCart' onClick={handleCartClick} style={{ cursor: 'pointer' }}>
                         <Lottie
                             animationData={CartLottie}
-                            style={{ width: '2.5rem'}}
+                            style={{ width: '2.5rem' }}
                             loop={bagLoop}
                             onMouseEnter={() => setBagLoop(true)}
                             onMouseLeave={() => setBagLoop(false)}
@@ -66,7 +67,7 @@ export const HeaderNew = (orderedProduct: any) => {
                 </li>
             </ul>
 
-            <Drawer isOpen={isDrawerOpen} onClose={handleCloseDrawer} orderedProducts={orderedProduct} />
+            <Drawer isOpen={isDrawerOpen} onClose={handleCloseDrawer} orderedProducts={orderedProducts} setOrderedProducts={setOrderedProducts} />
 
         </nav>
     )

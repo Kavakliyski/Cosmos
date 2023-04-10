@@ -79,7 +79,7 @@ export const ShopItemPreview = ({ product, setOrderedProducts }: ShopItemPreview
             return false;
         }
 
-        console.log('handle order', image, title, price, size)
+        // console.log('handle order', image, title, price, size)
 
         setOrderedProducts((prevOrderedProducts: OrderedProduct[]) => {
             const index = prevOrderedProducts.findIndex((p) => p.title === title && p.size === size);
