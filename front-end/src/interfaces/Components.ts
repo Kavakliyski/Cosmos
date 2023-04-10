@@ -16,6 +16,6 @@ export interface DrawerProps {
         price: number,
         size: string
     } | null;
-    orderedProducts: Product[];
+    orderedProducts: any;
     setOrderedProducts: Function;
 }
