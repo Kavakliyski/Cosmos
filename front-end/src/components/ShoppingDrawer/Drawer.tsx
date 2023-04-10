@@ -9,7 +9,11 @@ import '../../styles/ShoppingDrawer/Drawer.scss';
 // lottie
 import Lottie from "lottie-react";
 import LottieArrow from "../../assets/icons/161-trending-flat-solid-edited.json";
+
+// interface
 import { Product } from "../../interfaces/IProducts";
+import { DrawerProps } from "../../interfaces/Components";
+
 
 const DrawerContainer = styled.div`
     position: fixed;
@@ -55,6 +59,12 @@ const CloseDrawer = styled.button`
 `
 
 const ItemsButton = styled.button`
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
     border: none;
     background-color: transparent;
     font-size: 34px;
@@ -89,23 +99,9 @@ const ItemsButton = styled.button`
     }
 `
 
-interface DrawerProps {
-    isOpen: boolean;
-    onClose: () => void;
-    orderProduct?: {
-        image: string,
-        title: string,
-        price: number,
-        size: string
-    } | null;
-    orderedProducts: Product[];
-    setOrderedProducts: Function;
-}
-
 
 const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose, orderedProducts, setOrderedProducts }) => {
 
-    // const [products, setProducts] = useState();
     const [totalPrice, setTotalPrice] = useState(0);
     const [loopArrow, setLoopArrow] = useState(false);
 

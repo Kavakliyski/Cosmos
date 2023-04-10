@@ -27,6 +27,9 @@ const ProductPrice = styled.p`
 `
 
 const SizeButton = styled.button<{ isSelected: boolean }>`
+
+    text-align: center;
+
     width: 40px;
     height: 40px;
     border: 1px solid #1d0623;

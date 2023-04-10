@@ -43,6 +43,13 @@
             .ItmesContainer {
                 text-align: center;
                 padding: 10px;
+
+                p {
+                    display: flex;
+                    text-align: center;
+                    justify-content: center;
+                    font-size: 22px;
+                }
             }
         }
     }
@@ -88,8 +95,8 @@
                 .ItmesContainer {
                     display: flex;
                     text-align: center;
-                    padding: 0px;
                     justify-content: center;
+                    padding: 0px;
                 }
             }
         }
