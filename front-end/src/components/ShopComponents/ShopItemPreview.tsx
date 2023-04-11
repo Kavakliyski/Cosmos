@@ -53,7 +53,7 @@ display: flex;
 `
 
 const OrderButton = styled.button`
-    width: 300px;
+    width: 350px;
     height: 40px;
     text-transform: uppercase;
     background-color: #1d0623;

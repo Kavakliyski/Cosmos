@@ -61,9 +61,10 @@ const CloseDrawer = styled.button`
 const ItemsButton = styled.button`
 
     display: flex;
-
     align-items: center;
     justify-content: center;
+
+    color: #1d0623;
 
     border: none;
     background-color: transparent;
@@ -86,17 +87,6 @@ const ItemsButton = styled.button`
         animation-duration: 0.8s;
     }
     
-    @keyframes wave {
-        from {
-            transform: scale(1);
-            opacity: 1;
-        }
-
-        to {
-            transform: scale(1.5);
-            opacity: 0.7;
-        }
-    }
 `
 
 
