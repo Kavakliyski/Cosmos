@@ -1,5 +1,5 @@
 // react
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 // logo
 import logo from '../../assets/logo.svg';
@@ -22,11 +22,12 @@ import { IHeader } from '../../interfaces/Components';
 
 
 export const HeaderNew = ({ orderedProducts, setOrderedProducts }: IHeader) => {
-    
+
 
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-
     const [bagLoop, setBagLoop] = useState(false);
+    const [itemsInBag, setItemsInBag] = useState(0);
+
 
     const handleCartClick = () => {
 
@@ -38,6 +39,12 @@ export const HeaderNew = ({ orderedProducts, setOrderedProducts }: IHeader) => {
         setIsDrawerOpen(false);
     };
 
+    useEffect(() => {
+
+        setItemsInBag(orderedProducts.reduce((total, product) => total + product.count, 0))
+    }, [orderedProducts]);
+
+    console.log(itemsInBag)
 
     return (
         <nav>
@@ -56,6 +63,13 @@ export const HeaderNew = ({ orderedProducts, setOrderedProducts }: IHeader) => {
                 <Link to="/shop"><li>магазин</li></Link>
                 <li>
                     <div className='ShoppingCart' onClick={handleCartClick} style={{ cursor: 'pointer' }}>
+
+                        {itemsInBag > 0 &&
+                            <div className='CartIndicator'>
+                                {itemsInBag}
+                            </div>
+                        }
+
                         <Lottie
                             animationData={CartLottie}
                             style={{ width: '2.5rem' }}

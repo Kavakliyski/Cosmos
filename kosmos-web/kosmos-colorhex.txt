@@ -1,6 +1,6 @@
 lilavo - #1d0623
 julto - #e5e083
-rozovo -#dd3758
+rozovo - #dd3758
 bqlo - #e4e4e4
 cherno - #161616
 
