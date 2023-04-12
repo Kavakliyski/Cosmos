@@ -26,7 +26,8 @@
             img {
                 width: auto;
                 overflow: hidden;
-                // height: 200px;
+                box-shadow: 1px 1px 20px 1px #1d0623;
+                border-radius: 6px;
             }
 
             .TextContainer {
@@ -42,7 +43,6 @@
 
             .ItmesContainer {
                 text-align: center;
-                padding: 10px;
 
                 p {
                     display: flex;
@@ -59,8 +59,14 @@
         bottom: 20px;
         left: 20px;
         background-color: #fff;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
         padding: 10px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+
+        p {
+            padding: 10px;
+        }
     }
 
 
