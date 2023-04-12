@@ -37,7 +37,7 @@ const DrawerContainer = styled.div`
 const CloseDrawer = styled.button`
     display: flex;
     align-items: center;
-    // justify-content: center;
+
     gap: 15px;
     background-color: transparent;
     border: none;
@@ -46,6 +46,10 @@ const CloseDrawer = styled.button`
     padding-top: 15px;
 
     opacity: 0.6;
+
+    color: #1d0623;
+
+    width: 100%;
 
     img {
         width: 5rem;
@@ -134,15 +138,18 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose, orderedProducts, setOr
         >
             <div className="DrawerWrapper">
 
-                <CloseDrawer onClick={onClose}>
+                <CloseDrawer
+                    onMouseEnter={() => setLoopArrow(true)}
+                    onMouseLeave={() => setLoopArrow(false)}
+                    onClick={onClose}>
+
                     <Lottie
                         animationData={LottieArrow}
                         style={{ height: 100, width: 100 }}
                         loop={loopArrow}
-                        onMouseEnter={() => setLoopArrow(true)}
-                        onMouseLeave={() => setLoopArrow(false)}
+
                     />
-                    <p>Затвори</p>
+                    <p>ЗАТОВРИ</p>
                 </CloseDrawer>
 
                 <div className="ProductsContainer">
@@ -174,7 +181,7 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose, orderedProducts, setOr
                                     )
                                 }
                                 <div className="TotalPrice">
-                                    Обща стойност: {totalPrice} лева
+                                    <p>Обща стойност: {totalPrice} лева</p>
                                     <p><button>Завърши поръчка</button></p>
                                 </div>
                             </>

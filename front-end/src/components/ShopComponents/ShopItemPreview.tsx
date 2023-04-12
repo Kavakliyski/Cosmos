@@ -140,7 +140,7 @@ export const ShopItemPreview = ({ product, setOrderedProducts }: ShopItemPreview
                     `${size}`
                 )
             }>
-                <Confetti active={confettiActive} config={{ angle: 65, spread: 80, elementCount: 80, startVelocity: 45, decay: 0.999 }} />
+                <Confetti active={confettiActive} config={{ angle: 65, spread: 80, elementCount: 30, startVelocity: 10, decay: 0.999 }} />
                 {orderText}
             </OrderButton>
         </div>

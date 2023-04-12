@@ -2,37 +2,37 @@
     color: #161616 !important;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 100%; // need this to get scroll
-    padding: 0px 20px 0px 20px;
+    justify-content: center;
+    align-items: center;
 
+    height: 100%; // need this to get scroll
 
     .ProductsContainer {
-        flex: 1;
-        overflow-y: auto;
-        padding-top: 20px;
 
-        /* Customize the scrollbar */
-        ::-webkit-scrollbar {
-            width: 1px;
-        }
+        flex: 1;
+        width: 90%;
+        z-index: 10;
+        overflow-y: auto;
+
+        padding-bottom: 5rem;
 
         .ProductDrawer {
             padding: 10px 10px 40px 10px;
             display: flex;
-
+            justify-content: center;
+            align-items: center;
             border-top: 1px solid #161616;
 
             img {
-                width: auto;
+                width: 100%;
+                height: max-content;
                 overflow: hidden;
-                box-shadow: 1px 1px 20px 1px #1d0623;
+                box-shadow: 0px 1px 10px 0px #1d0623;
                 border-radius: 6px;
             }
 
             .TextContainer {
                 text-align: center;
-                padding: 10px;
                 width: 100%;
 
                 p {
@@ -55,17 +55,25 @@
     }
 
     .TotalPrice {
-        position: fixed;
-        bottom: 20px;
-        left: 20px;
         background-color: #fff;
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 1px 10px 0px #1d0623;
+        padding: 20px;
         overflow: hidden;
-        padding: 10px;
         border-radius: 10px;
+        width: 80%;
+        margin: 0 5%;
 
         p {
+            font-size: 22px;
+            color: #1d0623;
+        }
+
+        button {
+            border: none;
+            font-size: 22px;
+            border-radius: 10px;
             padding: 10px;
+            color: #1d0623;
         }
     }
 
@@ -77,11 +85,13 @@
 
             .ProductDrawer {
 
-                border-top: none;
 
                 display: initial;
+                border: none;
 
                 img {
+                    margin-top: 10px;
+
                     overflow: hidden;
                     max-width: 90%;
                 }
@@ -104,18 +114,12 @@
                     justify-content: center;
                     padding: 0px;
                     gap: 50px;
+
+                    border-bottom: 1px solid #161616;
+                    margin-bottom: 40px;
                 }
             }
         }
     }
 
-    .TotalPrice {
-        position: relative;
-        overflow: hidden;
-        bottom: 0px;
-        left: 0px;
-        background-color: #fff;
-        padding: 0px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
 }
