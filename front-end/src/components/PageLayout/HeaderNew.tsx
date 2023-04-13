@@ -44,7 +44,6 @@ export const HeaderNew = ({ orderedProducts, setOrderedProducts }: IHeader) => {
         setItemsInBag(orderedProducts.reduce((total, product) => total + product.count, 0))
     }, [orderedProducts]);
 
-    console.log(itemsInBag)
 
     return (
         <nav>

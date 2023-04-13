@@ -17,6 +17,8 @@ function FilmDetails() {
     const [error, setError] = useState<any | null>(null);
     const [loading, setLoading] = useState<boolean>(true);
 
+    let CoverImage = '';
+    let PosterImage = '';
 
     useEffect(() => {
 
@@ -35,10 +37,15 @@ function FilmDetails() {
             });
     }, [id])
 
-    
 
-    const CoverImage = `${import.meta.env.VITE_STRAPI_CMS_URL}${film && film.attributes.Cover2?.data?.attributes?.formats?.large?.url}`;
-    const PosterImage = `${import.meta.env.VITE_STRAPI_CMS_URL}${film && film.attributes.Poster?.data?.attributes?.formats?.large?.url}`;
+    try {
+        CoverImage = `${import.meta.env.VITE_STRAPI_CMS_URL}${film && film.attributes.Cover2?.data?.attributes?.formats?.large?.url}`;
+        PosterImage = `${import.meta.env.VITE_STRAPI_CMS_URL}${film && film.attributes.Poster?.data?.attributes?.formats?.large?.url}`;
+    } catch (err) {
+        console.log(err);
+        setLoading(true);
+    }
+
 
     if (loading) return <h2>Loading..</h2>
     if (error) return <h2>Error.. <br /> {error}</h2>
@@ -52,7 +59,7 @@ function FilmDetails() {
                     <h5>{film.attributes.Title}</h5>
                     <p>директор: {film.attributes.Director}</p>
                     <p>с участието на: {film.attributes.Cast}</p>
-                    <p>жанр: {film.attributes.Genre}</p>
+                    <p>жанр: {film.attributes.Gener}</p>
                     <p>дата на излизане: {film.attributes.Release_date}</p>
                 </div>
 
@@ -60,6 +67,14 @@ function FilmDetails() {
             </div>
 
             <div className='FilmDetailsCarousel'>
+                {
+                    film.attributes.Carousel.data && film.attributes.Carousel.data.map((film: any, index: number) => (
+                        <div key={index}>
+                            <img src={`${import.meta.env.VITE_STRAPI_CMS_URL}${film.attributes.url}`} />
+                            <p></p>
+                        </div>
+                    ))
+                }
             </div>
 
         </div>

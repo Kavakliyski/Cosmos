@@ -109,8 +109,8 @@ export const FilmRight = ({ title, director, cast, genre, year, movie_image }: I
                         <StyledH4>{title}</StyledH4>
                         <div>
                             <StyledPar>директор: {director}</StyledPar>
-                            <StyledPar>с участието на: {cast}</StyledPar>
-                            <StyledPar>жанр: {genre}</StyledPar>
+                            <StyledPar>с участието на: {genre}</StyledPar>
+                            <StyledPar>жанр: {cast}</StyledPar>
                         </div>
                     </figcaption>
                 </HoverFigure>
@@ -135,8 +135,8 @@ export const FilmLeft = ({ title, director, cast, genre, year, movie_image }: IF
                         <StyledH4>{title}</StyledH4>
                         <div>
                             <StyledPar>директор: {director}</StyledPar>
-                            <StyledPar>с участието на: {cast}</StyledPar>
-                            <StyledPar>жанр: {genre}</StyledPar>
+                            <StyledPar>с участието на: {genre}</StyledPar>
+                            <StyledPar>жанр: {cast}</StyledPar>
                         </div>
                     </figcaption>
                 </HoverFigure>

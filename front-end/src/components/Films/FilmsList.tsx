@@ -18,23 +18,32 @@ export const FilmsList = () => {
     const [error, setError] = useState<any | null>(null);
     const [loading, setLoading] = useState<boolean>(true);
 
+    // ====================== Strapi Unavailable =================
+    // useEffect(() => {
+
+    //     setLoading(true);
+
+    //     axios.get(`${import.meta.env.VITE_STRAPI_CMS_URL}/api/movies?populate=*`)
+    //         .then((response) => {
+    //             setError(null);
+    //             setFilms(response.data.data)
+    //             setLoading(false);
+    //         })
+    //         .catch(error => {
+    //             setError(error);
+    //             console.log(error);
+    //             setLoading(false);
+    //         });
+    // }, [])
+    // ====================== Strapi Unavailable =================
 
     useEffect(() => {
-
-        setLoading(true);
-
-        axios.get(`${import.meta.env.VITE_STRAPI_CMS_URL}/api/movies?populate=*`)
-            .then((response) => {
-                setError(null);
-                setFilms(response.data.data)
-                setLoading(false);
-            })
-            .catch(error => {
-                setError(error);
-                console.log(error);
-                setLoading(false);
-            });
-    }, [])
+        fetch("../../../public/strapi-movies-api.json")
+            .then((response) => (response.json()))
+            .then((jsonData) => (setFilms(jsonData)))
+            .catch((error) => (setError(error)));
+        setLoading(false);
+    }, []);
 
 
     if (loading) return <h2>Loading..</h2>
@@ -45,16 +54,16 @@ export const FilmsList = () => {
         <div className='FilmsListWrapper'>
 
             {
-                films.map((film: any, index: number) => {
+                films && films.map((film: any, index: number) => {
                     const movieImage = film.attributes.Cover?.data?.attributes?.url;
                     return index % 2 === 0 ? (
 
                         <Link style={{ textDecoration: 'none' }} key={`${film.id}`} to={`/films/${film.id}`}>
-                            <FilmRight title={film.attributes.Title} director={film.attributes.Director} cast={film.attributes.Cast} genre={film.attributes.Cast} year={film.attributes.Year} movie_image={movieImage} />
+                            <FilmRight title={film.attributes.Title} director={film.attributes.Director} cast={film.attributes.Gener} genre={film.attributes.Cast} year={film.attributes.Year} movie_image={movieImage} />
                         </Link>
                     ) : (
                         <Link style={{ textDecoration: 'none' }} key={`${film.id}`} to={`/films/${film.id}`}>
-                            <FilmLeft title={film.attributes.Title} director={film.attributes.Director} cast={film.attributes.Cast} genre={film.attributes.Cast} year={film.attributes.Year} movie_image={movieImage} />
+                            <FilmLeft title={film.attributes.Title} director={film.attributes.Director} cast={film.attributes.Gener} genre={film.attributes.Cast} year={film.attributes.Year} movie_image={movieImage} />
                         </Link>)
                 })
             }

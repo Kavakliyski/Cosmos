@@ -82,7 +82,8 @@ export const ShopItemPreview = ({ product, setOrderedProducts }: ShopItemPreview
     const handleOrder = (image: string, title: string, price: number, size: string) => {
 
         if (size === 'null') {
-            alert("Изберете размер")
+            setOrderText('Изберете размер');
+            setTimeout(() => setOrderText('Поръчай сега'), 1000);
             return false;
         }
 

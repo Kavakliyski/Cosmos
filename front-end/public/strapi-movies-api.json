@@ -1,0 +1,659 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "attributes": {
+                "Title": "проект сияние",
+                "Year": "2023",
+                "Director": "Кристофър Нолан",
+                "Cast": "Крисчън Бейл, Морган Фрийман, Алекса Деми, Кристоф Уолтс, Самюел Джаксън",
+                "Gener": "научна фантастика",
+                "Release_date": "23.08.2023",
+                "createdAt": "2023-03-13T14:25:36.550Z",
+                "updatedAt": "2023-03-15T09:03:00.889Z",
+                "publishedAt": "2023-03-13T14:25:37.386Z",
+                "slug": "proekt-siyanie",
+                "Cover": {
+                    "data": {
+                        "id": 14,
+                        "attributes": {
+                            "name": "5rx3nwyl 1.png",
+                            "alternativeText": null,
+                            "caption": null,
+                            "width": 1000,
+                            "height": 524,
+                            "formats": {
+                                "thumbnail": {
+                                    "name": "thumbnail_5rx3nwyl 1.png",
+                                    "hash": "thumbnail_5rx3nwyl_1_56bbf8c1be",
+                                    "ext": ".png",
+                                    "mime": "image/png",
+                                    "path": null,
+                                    "width": 245,
+                                    "height": 128,
+                                    "size": 79.73,
+                                    "url": "/uploads/thumbnail_5rx3nwyl_1_56bbf8c1be.png"
+                                },
+                                "small": {
+                                    "name": "small_5rx3nwyl 1.png",
+                                    "hash": "small_5rx3nwyl_1_56bbf8c1be",
+                                    "ext": ".png",
+                                    "mime": "image/png",
+                                    "path": null,
+                                    "width": 500,
+                                    "height": 262,
+                                    "size": 318.02,
+                                    "url": "/uploads/small_5rx3nwyl_1_56bbf8c1be.png"
+                                },
+                                "medium": {
+                                    "name": "medium_5rx3nwyl 1.png",
+                                    "hash": "medium_5rx3nwyl_1_56bbf8c1be",
+                                    "ext": ".png",
+                                    "mime": "image/png",
+                                    "path": null,
+                                    "width": 750,
+                                    "height": 393,
+                                    "size": 705.23,
+                                    "url": "/uploads/medium_5rx3nwyl_1_56bbf8c1be.png"
+                                }
+                            },
+                            "hash": "5rx3nwyl_1_56bbf8c1be",
+                            "ext": ".png",
+                            "mime": "image/png",
+                            "size": 305.68,
+                            "url": "/uploads/5rx3nwyl_1_56bbf8c1be.png",
+                            "previewUrl": null,
+                            "provider": "local",
+                            "provider_metadata": null,
+                            "createdAt": "2023-03-14T09:25:07.997Z",
+                            "updatedAt": "2023-03-14T09:25:07.997Z"
+                        }
+                    }
+                },
+                "Poster": {
+                    "data": {
+                        "id": 7,
+                        "attributes": {
+                            "name": "poster1-rq.jpg",
+                            "alternativeText": null,
+                            "caption": null,
+                            "width": 2953,
+                            "height": 4134,
+                            "formats": {
+                                "thumbnail": {
+                                    "name": "thumbnail_poster1-rq.jpg",
+                                    "hash": "thumbnail_poster1_rq_c9091f7fe1",
+                                    "ext": ".jpg",
+                                    "mime": "image/jpeg",
+                                    "path": null,
+                                    "width": 112,
+                                    "height": 156,
+                                    "size": 4.56,
+                                    "url": "/uploads/thumbnail_poster1_rq_c9091f7fe1.jpg"
+                                },
+                                "small": {
+                                    "name": "small_poster1-rq.jpg",
+                                    "hash": "small_poster1_rq_c9091f7fe1",
+                                    "ext": ".jpg",
+                                    "mime": "image/jpeg",
+                                    "path": null,
+                                    "width": 357,
+                                    "height": 500,
+                                    "size": 32.99,
+                                    "url": "/uploads/small_poster1_rq_c9091f7fe1.jpg"
+                                },
+                                "large": {
+                                    "name": "large_poster1-rq.jpg",
+                                    "hash": "large_poster1_rq_c9091f7fe1",
+                                    "ext": ".jpg",
+                                    "mime": "image/jpeg",
+                                    "path": null,
+                                    "width": 714,
+                                    "height": 1000,
+                                    "size": 121.2,
+                                    "url": "/uploads/large_poster1_rq_c9091f7fe1.jpg"
+                                },
+                                "medium": {
+                                    "name": "medium_poster1-rq.jpg",
+                                    "hash": "medium_poster1_rq_c9091f7fe1",
+                                    "ext": ".jpg",
+                                    "mime": "image/jpeg",
+                                    "path": null,
+                                    "width": 536,
+                                    "height": 750,
+                                    "size": 68.14,
+                                    "url": "/uploads/medium_poster1_rq_c9091f7fe1.jpg"
+                                }
+                            },
+                            "hash": "poster1_rq_c9091f7fe1",
+                            "ext": ".jpg",
+                            "mime": "image/jpeg",
+                            "size": 3659.34,
+                            "url": "/uploads/poster1_rq_c9091f7fe1.jpg",
+                            "previewUrl": null,
+                            "provider": "local",
+                            "provider_metadata": null,
+                            "createdAt": "2023-03-13T14:23:41.217Z",
+                            "updatedAt": "2023-03-13T14:23:41.217Z"
+                        }
+                    }
+                },
+                "Carousel": {
+                    "data": [
+                        {
+                            "id": 11,
+                            "attributes": {
+                                "name": "8umq0s7h 1.png",
+                                "alternativeText": null,
+                                "caption": null,
+                                "width": 1012,
+                                "height": 506,
+                                "formats": {
+                                    "thumbnail": {
+                                        "name": "thumbnail_8umq0s7h 1.png",
+                                        "hash": "thumbnail_8umq0s7h_1_15c18c1108",
+                                        "ext": ".png",
+                                        "mime": "image/png",
+                                        "path": null,
+                                        "width": 245,
+                                        "height": 123,
+                                        "size": 65.87,
+                                        "url": "/uploads/thumbnail_8umq0s7h_1_15c18c1108.png"
+                                    },
+                                    "small": {
+                                        "name": "small_8umq0s7h 1.png",
+                                        "hash": "small_8umq0s7h_1_15c18c1108",
+                                        "ext": ".png",
+                                        "mime": "image/png",
+                                        "path": null,
+                                        "width": 500,
+                                        "height": 250,
+                                        "size": 240.24,
+                                        "url": "/uploads/small_8umq0s7h_1_15c18c1108.png"
+                                    },
+                                    "medium": {
+                                        "name": "medium_8umq0s7h 1.png",
+                                        "hash": "medium_8umq0s7h_1_15c18c1108",
+                                        "ext": ".png",
+                                        "mime": "image/png",
+                                        "path": null,
+                                        "width": 750,
+                                        "height": 375,
+                                        "size": 514.72,
+                                        "url": "/uploads/medium_8umq0s7h_1_15c18c1108.png"
+                                    },
+                                    "large": {
+                                        "name": "large_8umq0s7h 1.png",
+                                        "hash": "large_8umq0s7h_1_15c18c1108",
+                                        "ext": ".png",
+                                        "mime": "image/png",
+                                        "path": null,
+                                        "width": 1000,
+                                        "height": 500,
+                                        "size": 823.87,
+                                        "url": "/uploads/large_8umq0s7h_1_15c18c1108.png"
+                                    }
+                                },
+                                "hash": "8umq0s7h_1_15c18c1108",
+                                "ext": ".png",
+                                "mime": "image/png",
+                                "size": 188.76,
+                                "url": "/uploads/8umq0s7h_1_15c18c1108.png",
+                                "previewUrl": null,
+                                "provider": "local",
+                                "provider_metadata": null,
+                                "createdAt": "2023-03-14T09:25:07.128Z",
+                                "updatedAt": "2023-03-14T12:01:18.015Z"
+                            }
+                        },
+                        {
+                            "id": 13,
+                            "attributes": {
+                                "name": "xzjvcjgk 1.png",
+                                "alternativeText": null,
+                                "caption": null,
+                                "width": 1440,
+                                "height": 554,
+                                "formats": {
+                                    "thumbnail": {
+                                        "name": "thumbnail_xzjvcjgk 1.png",
+                                        "hash": "thumbnail_xzjvcjgk_1_0e809b9926",
+                                        "ext": ".png",
+                                        "mime": "image/png",
+                                        "path": null,
+                                        "width": 245,
+                                        "height": 94,
+                                        "size": 55.55,
+                                        "url": "/uploads/thumbnail_xzjvcjgk_1_0e809b9926.png"
+                                    },
+                                    "small": {
+                                        "name": "small_xzjvcjgk 1.png",
+                                        "hash": "small_xzjvcjgk_1_0e809b9926",
+                                        "ext": ".png",
+                                        "mime": "image/png",
+                                        "path": null,
+                                        "width": 500,
+                                        "height": 192,
+                                        "size": 220.76,
+                                        "url": "/uploads/small_xzjvcjgk_1_0e809b9926.png"
+                                    },
+                                    "medium": {
+                                        "name": "medium_xzjvcjgk 1.png",
+                                        "hash": "medium_xzjvcjgk_1_0e809b9926",
+                                        "ext": ".png",
+                                        "mime": "image/png",
+                                        "path": null,
+                                        "width": 750,
+                                        "height": 289,
+                                        "size": 492.71,
+                                        "url": "/uploads/medium_xzjvcjgk_1_0e809b9926.png"
+                                    },
+                                    "large": {
+                                        "name": "large_xzjvcjgk 1.png",
+                                        "hash": "large_xzjvcjgk_1_0e809b9926",
+                                        "ext": ".png",
+                                        "mime": "image/png",
+                                        "path": null,
+                                        "width": 1000,
+                                        "height": 385,
+                                        "size": 861.39,
+                                        "url": "/uploads/large_xzjvcjgk_1_0e809b9926.png"
+                                    }
+                                },
+                                "hash": "xzjvcjgk_1_0e809b9926",
+                                "ext": ".png",
+                                "mime": "image/png",
+                                "size": 431.13,
+                                "url": "/uploads/xzjvcjgk_1_0e809b9926.png",
+                                "previewUrl": null,
+                                "provider": "local",
+                                "provider_metadata": null,
+                                "createdAt": "2023-03-14T09:25:07.520Z",
+                                "updatedAt": "2023-03-14T09:25:07.520Z"
+                            }
+                        },
+                        {
+                            "id": 14,
+                            "attributes": {
+                                "name": "5rx3nwyl 1.png",
+                                "alternativeText": null,
+                                "caption": null,
+                                "width": 1000,
+                                "height": 524,
+                                "formats": {
+                                    "thumbnail": {
+                                        "name": "thumbnail_5rx3nwyl 1.png",
+                                        "hash": "thumbnail_5rx3nwyl_1_56bbf8c1be",
+                                        "ext": ".png",
+                                        "mime": "image/png",
+                                        "path": null,
+                                        "width": 245,
+                                        "height": 128,
+                                        "size": 79.73,
+                                        "url": "/uploads/thumbnail_5rx3nwyl_1_56bbf8c1be.png"
+                                    },
+                                    "small": {
+                                        "name": "small_5rx3nwyl 1.png",
+                                        "hash": "small_5rx3nwyl_1_56bbf8c1be",
+                                        "ext": ".png",
+                                        "mime": "image/png",
+                                        "path": null,
+                                        "width": 500,
+                                        "height": 262,
+                                        "size": 318.02,
+                                        "url": "/uploads/small_5rx3nwyl_1_56bbf8c1be.png"
+                                    },
+                                    "medium": {
+                                        "name": "medium_5rx3nwyl 1.png",
+                                        "hash": "medium_5rx3nwyl_1_56bbf8c1be",
+                                        "ext": ".png",
+                                        "mime": "image/png",
+                                        "path": null,
+                                        "width": 750,
+                                        "height": 393,
+                                        "size": 705.23,
+                                        "url": "/uploads/medium_5rx3nwyl_1_56bbf8c1be.png"
+                                    }
+                                },
+                                "hash": "5rx3nwyl_1_56bbf8c1be",
+                                "ext": ".png",
+                                "mime": "image/png",
+                                "size": 305.68,
+                                "url": "/uploads/5rx3nwyl_1_56bbf8c1be.png",
+                                "previewUrl": null,
+                                "provider": "local",
+                                "provider_metadata": null,
+                                "createdAt": "2023-03-14T09:25:07.997Z",
+                                "updatedAt": "2023-03-14T09:25:07.997Z"
+                            }
+                        },
+                        {
+                            "id": 12,
+                            "attributes": {
+                                "name": "3p8gcqg9 1.png",
+                                "alternativeText": null,
+                                "caption": null,
+                                "width": 1440,
+                                "height": 720,
+                                "formats": {
+                                    "thumbnail": {
+                                        "name": "thumbnail_3p8gcqg9 1.png",
+                                        "hash": "thumbnail_3p8gcqg9_1_7879429793",
+                                        "ext": ".png",
+                                        "mime": "image/png",
+                                        "path": null,
+                                        "width": 245,
+                                        "height": 123,
+                                        "size": 46.09,
+                                        "url": "/uploads/thumbnail_3p8gcqg9_1_7879429793.png"
+                                    },
+                                    "small": {
+                                        "name": "small_3p8gcqg9 1.png",
+                                        "hash": "small_3p8gcqg9_1_7879429793",
+                                        "ext": ".png",
+                                        "mime": "image/png",
+                                        "path": null,
+                                        "width": 500,
+                                        "height": 250,
+                                        "size": 163.64,
+                                        "url": "/uploads/small_3p8gcqg9_1_7879429793.png"
+                                    },
+                                    "medium": {
+                                        "name": "medium_3p8gcqg9 1.png",
+                                        "hash": "medium_3p8gcqg9_1_7879429793",
+                                        "ext": ".png",
+                                        "mime": "image/png",
+                                        "path": null,
+                                        "width": 750,
+                                        "height": 375,
+                                        "size": 348.42,
+                                        "url": "/uploads/medium_3p8gcqg9_1_7879429793.png"
+                                    },
+                                    "large": {
+                                        "name": "large_3p8gcqg9 1.png",
+                                        "hash": "large_3p8gcqg9_1_7879429793",
+                                        "ext": ".png",
+                                        "mime": "image/png",
+                                        "path": null,
+                                        "width": 1000,
+                                        "height": 500,
+                                        "size": 600.56,
+                                        "url": "/uploads/large_3p8gcqg9_1_7879429793.png"
+                                    }
+                                },
+                                "hash": "3p8gcqg9_1_7879429793",
+                                "ext": ".png",
+                                "mime": "image/png",
+                                "size": 241.39,
+                                "url": "/uploads/3p8gcqg9_1_7879429793.png",
+                                "previewUrl": null,
+                                "provider": "local",
+                                "provider_metadata": null,
+                                "createdAt": "2023-03-14T09:25:07.353Z",
+                                "updatedAt": "2023-03-14T12:02:04.479Z"
+                            }
+                        }
+                    ]
+                },
+                "Video": {
+                    "data": {
+                        "id": 12,
+                        "attributes": {
+                            "name": "3p8gcqg9 1.png",
+                            "alternativeText": null,
+                            "caption": null,
+                            "width": 1440,
+                            "height": 720,
+                            "formats": {
+                                "thumbnail": {
+                                    "name": "thumbnail_3p8gcqg9 1.png",
+                                    "hash": "thumbnail_3p8gcqg9_1_7879429793",
+                                    "ext": ".png",
+                                    "mime": "image/png",
+                                    "path": null,
+                                    "width": 245,
+                                    "height": 123,
+                                    "size": 46.09,
+                                    "url": "/uploads/thumbnail_3p8gcqg9_1_7879429793.png"
+                                },
+                                "small": {
+                                    "name": "small_3p8gcqg9 1.png",
+                                    "hash": "small_3p8gcqg9_1_7879429793",
+                                    "ext": ".png",
+                                    "mime": "image/png",
+                                    "path": null,
+                                    "width": 500,
+                                    "height": 250,
+                                    "size": 163.64,
+                                    "url": "/uploads/small_3p8gcqg9_1_7879429793.png"
+                                },
+                                "medium": {
+                                    "name": "medium_3p8gcqg9 1.png",
+                                    "hash": "medium_3p8gcqg9_1_7879429793",
+                                    "ext": ".png",
+                                    "mime": "image/png",
+                                    "path": null,
+                                    "width": 750,
+                                    "height": 375,
+                                    "size": 348.42,
+                                    "url": "/uploads/medium_3p8gcqg9_1_7879429793.png"
+                                },
+                                "large": {
+                                    "name": "large_3p8gcqg9 1.png",
+                                    "hash": "large_3p8gcqg9_1_7879429793",
+                                    "ext": ".png",
+                                    "mime": "image/png",
+                                    "path": null,
+                                    "width": 1000,
+                                    "height": 500,
+                                    "size": 600.56,
+                                    "url": "/uploads/large_3p8gcqg9_1_7879429793.png"
+                                }
+                            },
+                            "hash": "3p8gcqg9_1_7879429793",
+                            "ext": ".png",
+                            "mime": "image/png",
+                            "size": 241.39,
+                            "url": "/uploads/3p8gcqg9_1_7879429793.png",
+                            "previewUrl": null,
+                            "provider": "local",
+                            "provider_metadata": null,
+                            "createdAt": "2023-03-14T09:25:07.353Z",
+                            "updatedAt": "2023-03-14T12:02:04.479Z"
+                        }
+                    }
+                },
+                "Cover2": {
+                    "data": {
+                        "id": 15,
+                        "attributes": {
+                            "name": "xzjvcjgk 1.jpg",
+                            "alternativeText": null,
+                            "caption": null,
+                            "width": 1440,
+                            "height": 554,
+                            "formats": {
+                                "thumbnail": {
+                                    "name": "thumbnail_xzjvcjgk 1.jpg",
+                                    "hash": "thumbnail_xzjvcjgk_1_0f6eb6d1c9",
+                                    "ext": ".jpg",
+                                    "mime": "image/jpeg",
+                                    "path": null,
+                                    "width": 245,
+                                    "height": 94,
+                                    "size": 6.37,
+                                    "url": "/uploads/thumbnail_xzjvcjgk_1_0f6eb6d1c9.jpg"
+                                },
+                                "medium": {
+                                    "name": "medium_xzjvcjgk 1.jpg",
+                                    "hash": "medium_xzjvcjgk_1_0f6eb6d1c9",
+                                    "ext": ".jpg",
+                                    "mime": "image/jpeg",
+                                    "path": null,
+                                    "width": 750,
+                                    "height": 289,
+                                    "size": 51.6,
+                                    "url": "/uploads/medium_xzjvcjgk_1_0f6eb6d1c9.jpg"
+                                },
+                                "small": {
+                                    "name": "small_xzjvcjgk 1.jpg",
+                                    "hash": "small_xzjvcjgk_1_0f6eb6d1c9",
+                                    "ext": ".jpg",
+                                    "mime": "image/jpeg",
+                                    "path": null,
+                                    "width": 500,
+                                    "height": 192,
+                                    "size": 24.12,
+                                    "url": "/uploads/small_xzjvcjgk_1_0f6eb6d1c9.jpg"
+                                },
+                                "large": {
+                                    "name": "large_xzjvcjgk 1.jpg",
+                                    "hash": "large_xzjvcjgk_1_0f6eb6d1c9",
+                                    "ext": ".jpg",
+                                    "mime": "image/jpeg",
+                                    "path": null,
+                                    "width": 1000,
+                                    "height": 385,
+                                    "size": 83.88,
+                                    "url": "/uploads/large_xzjvcjgk_1_0f6eb6d1c9.jpg"
+                                }
+                            },
+                            "hash": "xzjvcjgk_1_0f6eb6d1c9",
+                            "ext": ".jpg",
+                            "mime": "image/jpeg",
+                            "size": 151.78,
+                            "url": "/uploads/xzjvcjgk_1_0f6eb6d1c9.jpg",
+                            "previewUrl": null,
+                            "provider": "local",
+                            "provider_metadata": null,
+                            "createdAt": "2023-03-14T13:28:37.296Z",
+                            "updatedAt": "2023-03-14T13:28:37.296Z"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "id": 2,
+            "attributes": {
+                "Title": "Testting",
+                "Year": "200",
+                "Director": "dir",
+                "Cast": "cast",
+                "Gener": "gen",
+                "Release_date": "relese",
+                "createdAt": "2023-03-14T08:37:16.465Z",
+                "updatedAt": "2023-03-20T07:26:29.052Z",
+                "publishedAt": "2023-03-14T08:37:17.143Z",
+                "slug": "testting",
+                "Cover": {
+                    "data": {
+                        "id": 14,
+                        "attributes": {
+                            "name": "5rx3nwyl 1.png",
+                            "alternativeText": null,
+                            "caption": null,
+                            "width": 1000,
+                            "height": 524,
+                            "formats": {
+                                "thumbnail": {
+                                    "name": "thumbnail_5rx3nwyl 1.png",
+                                    "hash": "thumbnail_5rx3nwyl_1_56bbf8c1be",
+                                    "ext": ".png",
+                                    "mime": "image/png",
+                                    "path": null,
+                                    "width": 245,
+                                    "height": 128,
+                                    "size": 79.73,
+                                    "url": "/uploads/thumbnail_5rx3nwyl_1_56bbf8c1be.png"
+                                },
+                                "small": {
+                                    "name": "small_5rx3nwyl 1.png",
+                                    "hash": "small_5rx3nwyl_1_56bbf8c1be",
+                                    "ext": ".png",
+                                    "mime": "image/png",
+                                    "path": null,
+                                    "width": 500,
+                                    "height": 262,
+                                    "size": 318.02,
+                                    "url": "/uploads/small_5rx3nwyl_1_56bbf8c1be.png"
+                                },
+                                "medium": {
+                                    "name": "medium_5rx3nwyl 1.png",
+                                    "hash": "medium_5rx3nwyl_1_56bbf8c1be",
+                                    "ext": ".png",
+                                    "mime": "image/png",
+                                    "path": null,
+                                    "width": 750,
+                                    "height": 393,
+                                    "size": 705.23,
+                                    "url": "/uploads/medium_5rx3nwyl_1_56bbf8c1be.png"
+                                }
+                            },
+                            "hash": "5rx3nwyl_1_56bbf8c1be",
+                            "ext": ".png",
+                            "mime": "image/png",
+                            "size": 305.68,
+                            "url": "/uploads/5rx3nwyl_1_56bbf8c1be.png",
+                            "previewUrl": null,
+                            "provider": "local",
+                            "provider_metadata": null,
+                            "createdAt": "2023-03-14T09:25:07.997Z",
+                            "updatedAt": "2023-03-14T09:25:07.997Z"
+                        }
+                    }
+                },
+                "Poster": {
+                    "data": null
+                },
+                "Carousel": {
+                    "data": null
+                },
+                "Video": {
+                    "data": null
+                },
+                "Cover2": {
+                    "data": null
+                }
+            }
+        },
+        {
+            "id": 3,
+            "attributes": {
+                "Title": "test2",
+                "Year": "test2",
+                "Director": "test2",
+                "Cast": "test2",
+                "Gener": "test2",
+                "Release_date": "test2",
+                "createdAt": "2023-03-14T08:57:42.059Z",
+                "updatedAt": "2023-03-14T12:42:28.517Z",
+                "publishedAt": "2023-03-14T08:57:42.742Z",
+                "slug": "test2",
+                "Cover": {
+                    "data": null
+                },
+                "Poster": {
+                    "data": null
+                },
+                "Carousel": {
+                    "data": null
+                },
+                "Video": {
+                    "data": null
+                },
+                "Cover2": {
+                    "data": null
+                }
+            }
+        }
+    ],
+    "meta": {
+        "pagination": {
+            "page": 1,
+            "pageSize": 25,
+            "pageCount": 1,
+            "total": 3
+        }
+    }
+}
