@@ -61,7 +61,7 @@
                             "ext": ".png",
                             "mime": "image/png",
                             "size": 305.68,
-                            "url": "/uploads/5rx3nwyl_1_56bbf8c1be.png",
+                            "url": "../../assets/forFilms/5rx3nwyl_1.png",
                             "previewUrl": null,
                             "provider": "local",
                             "provider_metadata": null,
@@ -537,7 +537,7 @@
             "id": 2,
             "attributes": {
                 "Title": "Testting",
-                "Year": "200",
+                "Year": "2022",
                 "Director": "dir",
                 "Cast": "cast",
                 "Gener": "gen",
@@ -594,7 +594,7 @@
                             "ext": ".png",
                             "mime": "image/png",
                             "size": 305.68,
-                            "url": "/uploads/5rx3nwyl_1_56bbf8c1be.png",
+                            "url": "../../assets/forFilms/3p8gcqg9_1.png",
                             "previewUrl": null,
                             "provider": "local",
                             "provider_metadata": null,
@@ -620,8 +620,8 @@
         {
             "id": 3,
             "attributes": {
-                "Title": "test2",
-                "Year": "test2",
+                "Title": "The Test2",
+                "Year": "2009",
                 "Director": "test2",
                 "Cast": "test2",
                 "Gener": "test2",
