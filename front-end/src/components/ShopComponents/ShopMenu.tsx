@@ -51,7 +51,7 @@ export const ShopMenu = ({ setOrderedProducts }: { setOrderedProducts: (updateFu
         fetch("../../../strapi-products-api.json")
             .then((response) => (response.json()))
             .then((jsonData) => (handleImageClick(jsonData[0]), setData(jsonData)));
-            setLoading(false);
+        setLoading(false);
     }, []);
 
 
