@@ -38,7 +38,7 @@ export const FilmsList = () => {
     // ====================== Strapi Unavailable =================
 
     useEffect(() => {
-        fetch("../../../public/strapi-movies-api.json")
+        fetch("../../../strapi-movies-api.json")
             .then((response) => (response.json()))
             .then((jsonData) => (setFilms(jsonData.data), console.log(jsonData.data)))
             .catch((error) => (setError(error)));
