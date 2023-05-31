@@ -1,8 +1,11 @@
-
+// react, styles
 import { useEffect, useState } from 'react';
-import heroIMG from '../../assets/heroimg.png';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom'
+
+// assets
+// import heroIMG from '../../assets/heroimg.png';
+import heroIMG2 from '../../assets/HomePage/heroimg.webp';
 
 
 const ImageContainer = styled.div`
@@ -13,8 +16,7 @@ const ImageContainer = styled.div`
 
 const HeroBanner = styled.img<{ loaded: boolean }>`
     position: relative;
-    width: 100vw;
-    max-width: 100%;
+    min-width: 100%;
     height: auto;    
     z-index: 2;
 
@@ -121,12 +123,13 @@ export const Hero = () => {
     useEffect(() => {
         const image = new Image();
         image.onload = handleImageLoad;
-        image.src = heroIMG;
+        image.src = heroIMG2;
     }, []);
+
 
     return (
         <ImageContainer>
-            <HeroBanner src={heroIMG} alt='' loaded={loaded} />
+            <HeroBanner src={heroIMG2} alt='' loaded={loaded} />
             <TextWrapper loaded={loaded}>
                 <div className="flex-item-1">
                     <div className="flex-item-1-sub-1">

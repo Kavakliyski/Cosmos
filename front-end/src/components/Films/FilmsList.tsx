@@ -38,7 +38,7 @@ export const FilmsList = () => {
     // ====================== Strapi Unavailable =================
 
     useEffect(() => {
-        fetch("../../../public/strapi-movies-api.json")
+        fetch("../../../strapi-movies-api.json")
             .then((response) => (response.json()))
             .then((jsonData) => (setFilms(jsonData)))
             .catch((error) => (setError(error)));
@@ -49,12 +49,13 @@ export const FilmsList = () => {
     if (loading) return <h2>Loading..</h2>
     if (error) return <h2>Error.. <br /> {error.message}</h2>
 
+    console.log(films && films.data[1].attributes)
 
     return (
         <div className='FilmsListWrapper'>
 
             {
-                films && films.map((film: any, index: number) => {
+                films && films.data.map((film: any, index: number) => {
                     const movieImage = film.attributes.Cover?.data?.attributes?.url;
                     return index % 2 === 0 ? (
 

@@ -46,42 +46,45 @@ export const HeaderNew = ({ orderedProducts, setOrderedProducts }: IHeader) => {
 
 
     return (
-        <nav>
-            <ul className="left-links">
-                <Link to="/about"><li>за нас</li></Link>
-                <Link to="/films"><li>филми</li></Link>
-            </ul>
+        <div className="HeaderNavWrapper">
+            <nav>
 
-            <div className="logo">
-                <Link to="/">
-                    <img src={logo} />
-                </Link>
-            </div>
+                <div className="logo">
+                    <Link to="/">
+                        <img src={logo} alt='КОСМОС' />
+                    </Link>
+                </div>
 
-            <ul className="right-links">
-                <Link to="/shop"><li>магазин</li></Link>
-                <li>
-                    <div className='ShoppingCart' onClick={handleCartClick} style={{ cursor: 'pointer' }}>
+                <ul className='Links-Left'>
+                    <li><Link to="/about">за нас</Link></li>
+                    <li><Link to="/films">филми</Link></li>
+                </ul>
 
-                        {itemsInBag > 0 &&
-                            <div className='CartIndicator'>
-                                {itemsInBag}
-                            </div>
-                        }
+                <ul className='Links-Right'>
+                    <li><Link to="/shop">магазин</Link></li>
+                    <li>
+                        <div className='ShoppingCart' onClick={handleCartClick} style={{ cursor: 'pointer' }}>
 
-                        <Lottie
-                            animationData={CartLottie}
-                            style={{ width: '2.5rem' }}
-                            loop={bagLoop}
-                            onMouseEnter={() => setBagLoop(true)}
-                            onMouseLeave={() => setBagLoop(false)}
-                        />
-                    </div>
-                </li>
-            </ul>
+                            {itemsInBag > 0 &&
+                                <div className='CartIndicator'>
+                                    {itemsInBag}
+                                </div>
+                            }
 
-            <Drawer isOpen={isDrawerOpen} onClose={handleCloseDrawer} orderedProducts={orderedProducts} setOrderedProducts={setOrderedProducts} />
+                            <Lottie
+                                animationData={CartLottie}
+                                style={{ width: '2.5rem' }}
+                                loop={bagLoop}
+                                onMouseEnter={() => setBagLoop(true)}
+                                onMouseLeave={() => setBagLoop(false)}
+                            />
+                        </div>
+                    </li>
+                </ul>
 
-        </nav>
+                <Drawer isOpen={isDrawerOpen} onClose={handleCloseDrawer} orderedProducts={orderedProducts} setOrderedProducts={setOrderedProducts} />
+
+            </nav>
+        </div>
     )
 }

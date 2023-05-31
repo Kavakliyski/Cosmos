@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 
 
 const LogoSVG = styled.img`
-    width: 20vw;
+    width: 25rem;
     display: block;
     margin: auto;
 `
@@ -24,24 +24,18 @@ function Footer() {
         <div className="FooterWrapper">
 
             <div className="FooterLogo">
-                <LogoSVG src={logo} />
+                <LogoSVG src={logo} alt='КОСМОС' />
             </div>
 
             <div className="FooterMenu">
                 <ul>
-                    <Link to='/'><li>начало</li></Link>
-
-                    <Link to='/about'><li>за нас</li></Link>
-
-                    <Link to='/flims'><li>филми</li></Link>
-
-                    <Link to='/shop'><li>магазин</li></Link>
-
-                    <Link to='/terms'><li>правила и условия</li></Link>
-
-                    <Link to='/faq'><li>често задавани въпроси</li></Link>
-
-                    <Link to='/careers'><li>кариери</li></Link>
+                    <li><Link to='/'>начало</Link></li>
+                    <li><Link to='/about'>за нас</Link></li>
+                    <li><Link to='/flims'>филми</Link></li>
+                    <li><Link to='/shop'>магазин</Link></li>
+                    <li><Link to='/terms'>правила и условия</Link></li>
+                    <li><Link to='/faq'>често задавани въпроси</Link></li>
+                    <li><Link to='/careers'>кариери</Link></li>
                 </ul>
             </div>
         </div>
