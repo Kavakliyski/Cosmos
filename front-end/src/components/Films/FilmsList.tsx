@@ -49,15 +49,11 @@ export const FilmsList = () => {
     if (loading) return <h2>Loading..</h2>
     if (error) return <h2>Error.. <br /> {error.message}</h2>
 
-<<<<<<< HEAD
-    console.log(films && films.data[1].attributes)
+    // console.log(films && films.data[1].attributes)
 
-=======
->>>>>>> acf29c3b23a5fd13264fbc0c802ce79a45de6482
     return (
         <div className='FilmsListWrapper'>
-
-            {
+            {/* {
                 films && films.data.map((film: any, index: number) => {
                     const movieImage = film.attributes.Cover?.data?.attributes?.url;
                     return index % 2 === 0 ? (
@@ -72,7 +68,7 @@ export const FilmsList = () => {
                             <FilmLeft title={film.attributes.Title} director={film.attributes.Director} cast={film.attributes.Gener} genre={film.attributes.Cast} year={film.attributes.Year} movie_image={movieImage} />
                         </Link>)
                 })
-            }
+            } */}
         </div>
     )
 }
