@@ -53,7 +53,7 @@ export const FilmsList = () => {
 
     return (
         <div className='FilmsListWrapper'>
-            {/* {
+            {
                 films && films.data.map((film: any, index: number) => {
                     const movieImage = film.attributes.Cover?.data?.attributes?.url;
                     return index % 2 === 0 ? (
@@ -68,7 +68,7 @@ export const FilmsList = () => {
                             <FilmLeft title={film.attributes.Title} director={film.attributes.Director} cast={film.attributes.Gener} genre={film.attributes.Cast} year={film.attributes.Year} movie_image={movieImage} />
                         </Link>)
                 })
-            } */}
+            }
         </div>
     )
 }
