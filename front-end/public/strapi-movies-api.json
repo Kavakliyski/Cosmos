@@ -536,16 +536,16 @@
         {
             "id": 2,
             "attributes": {
-                "Title": "Testting",
+                "Title": "Летящият холандец",
                 "Year": "2022",
-                "Director": "dir",
-                "Cast": "cast",
-                "Gener": "gen",
+                "Director": "Дейви Джоунс",
+                "Cast": "Крисчън Бейл, Морган Фрийман, Алекса Деми, Кристоф Уолтс, Самюел Джаксън",
+                "Gener": "Екшън",
                 "Release_date": "relese",
                 "createdAt": "2023-03-14T08:37:16.465Z",
                 "updatedAt": "2023-03-20T07:26:29.052Z",
                 "publishedAt": "2023-03-14T08:37:17.143Z",
-                "slug": "testting",
+                "slug": "the-flying-dutchman",
                 "Cover": {
                     "data": {
                         "id": 14,
@@ -620,16 +620,16 @@
         {
             "id": 3,
             "attributes": {
-                "Title": "The Test2",
+                "Title": "Яростни7",
                 "Year": "2009",
-                "Director": "test2",
-                "Cast": "test2",
-                "Gener": "test2",
+                "Director": "Димитър Пенов",
+                "Cast": "Кристоф Уолтс, Самюел Джаксън",
+                "Gener": "Драма",
                 "Release_date": "test2",
                 "createdAt": "2023-03-14T08:57:42.059Z",
                 "updatedAt": "2023-03-14T12:42:28.517Z",
                 "publishedAt": "2023-03-14T08:57:42.742Z",
-                "slug": "test2",
+                "slug": "furious-7",
                 "Cover": {
                     "data": null
                 },

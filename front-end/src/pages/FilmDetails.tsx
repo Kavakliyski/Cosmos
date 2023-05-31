@@ -4,55 +4,29 @@ import '../styles/Films_styles/FilmDetails.scss';
 // react
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { useLocation } from 'react-router-dom';
 
 // axios
 import axios from "axios";
 
 
 function FilmDetails() {
+    const location = useLocation();
+    const film = location.state?.film;
 
-    const { id } = useParams<{ id: string }>();
-
-    const [film, setFilm] = useState<any>(null);
     const [error, setError] = useState<any | null>(null);
-    const [loading, setLoading] = useState<boolean>(true);
-
-    let CoverImage = '';
-    let PosterImage = '';
-
-    useEffect(() => {
-
-        setLoading(true);
-
-        axios.get(`${import.meta.env.VITE_STRAPI_CMS_URL}/api/movies/${id}?populate=*`)
-            .then((response) => {
-                setError(null);
-                setFilm(response.data.data)
-                setLoading(false);
-            })
-            .catch(error => {
-                setError(error);
-                console.log(error);
-                setLoading(false);
-            });
-    }, [id])
 
 
-    try {
-        CoverImage = `${import.meta.env.VITE_STRAPI_CMS_URL}${film && film.attributes.Cover2?.data?.attributes?.formats?.large?.url}`;
-        PosterImage = `${import.meta.env.VITE_STRAPI_CMS_URL}${film && film.attributes.Poster?.data?.attributes?.formats?.large?.url}`;
-    } catch (err) {
-        console.log(err);
-        setLoading(true);
+    if (error) return <h2>Error.. <br /> {error}</h2>
+    if (!film) {
+        return <h2>Film data not found</h2>;
     }
 
-
-    if (loading) return <h2>Loading..</h2>
-    if (error) return <h2>Error.. <br /> {error}</h2>
+    console.log(film);
 
     return (
         <div className='FilmDetailsContainer'>
-            <img className='Cover' src={CoverImage} />
+            {/* <img className='Cover' src={CoverImage} />
 
             <div className='FilmDetailsWrapper'>
                 <div className='TextContainer'>
@@ -75,7 +49,7 @@ function FilmDetails() {
                         </div>
                     ))
                 }
-            </div>
+            </div> */}
 
         </div>
     )

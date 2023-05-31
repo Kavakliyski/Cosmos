@@ -21,6 +21,7 @@ const HoverFigure = styled.figure`
     
     img {
         width: 60vw;
+        height: auto;
     }
 
     & > * {
@@ -36,14 +37,14 @@ const HoverFigure = styled.figure`
         padding: .75rem;
         background: var(--c,#0009);
         clip-path: inset(0 var(--_i,100%) 0 0);
-        -webkit-mask:
+        // -webkit-mask:
         linear-gradient(#000 0 0),
         linear-gradient(#000 0 0);
         -webkit-mask-composite: xor;
         -webkit-mask-clip: text, padding-box;
     }
 
-    &:hover figcaption{
+    &:hover figcaption {
         --_i: 0%;
     }
 
@@ -54,7 +55,7 @@ const HoverFigure = styled.figure`
     @supports not (-webkit-mask-clip: text) {
         figcaption {
             -webkit-mask: none;
-            color: #e4e4e4;
+            color: #e4e4e4 !important;
         }
     }  
 

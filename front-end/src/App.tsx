@@ -39,7 +39,7 @@ function App() {
                 <Route index element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/films" element={<Films />} />
-                <Route path="/films/:id" element={<FilmDetails />} />
+                <Route path="/films/:slug" element={<FilmDetails />} />
                 <Route path="/shop" element={<Shop setOrderedProducts={setOrderedProducts} />} />
                 <Route path="/" element={<Terms />} />
                 <Route path="/" element={<Faq />} />
